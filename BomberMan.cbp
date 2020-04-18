@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BomberMan" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/BomberMan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../../../../boost_1_63_0" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../boost_1_63_0/stage/lib/libboost_serialization-mgw49-mt-s-1_63.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/BomberMan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++11" />
+					<Add directory="../../../../../boost_1_63_0" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../../../../../boost_1_63_0/stage/lib/libboost_serialization-mgw49-mt-s-1_63.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/SDL2-2.0.5/i686-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf -lSDL2_net" />
+			<Add library="mingw32" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/SDL2-2.0.5/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="Bomb.cpp" />
+		<Unit filename="Bomb.h" />
+		<Unit filename="Bomber.cpp" />
+		<Unit filename="Bomber.h" />
+		<Unit filename="Bonus.cpp" />
+		<Unit filename="Bonus.h" />
+		<Unit filename="Bouton.cpp" />
+		<Unit filename="Bouton.h" />
+		<Unit filename="BoutonContinue.cpp" />
+		<Unit filename="BoutonContinue.h" />
+		<Unit filename="BoutonGatherOnline.cpp" />
+		<Unit filename="BoutonGatherOnline.h" />
+		<Unit filename="BoutonJoinOnline.cpp" />
+		<Unit filename="BoutonJoinOnline.h" />
+		<Unit filename="BoutonKiss.cpp" />
+		<Unit filename="BoutonKiss.h" />
+		<Unit filename="BoutonKiss_GatherStart.cpp" />
+		<Unit filename="BoutonKiss_GatherStart.h" />
+		<Unit filename="BoutonKiss_JoinStart.cpp" />
+		<Unit filename="BoutonKiss_JoinStart.h" />
+		<Unit filename="BoutonMultiplayer.cpp" />
+		<Unit filename="BoutonMultiplayer.h" />
+		<Unit filename="BoutonNouvellePartie.cpp" />
+		<Unit filename="BoutonNouvellePartie.h" />
+		<Unit filename="BoutonOption.cpp" />
+		<Unit filename="BoutonOption.h" />
+		<Unit filename="BoutonQuitter.cpp" />
+		<Unit filename="BoutonQuitter.h" />
+		<Unit filename="BoutonRetour.cpp" />
+		<Unit filename="BoutonRetour.h" />
+		<Unit filename="Carte.cpp" />
+		<Unit filename="Carte.h" />
+		<Unit filename="Case.cpp" />
+		<Unit filename="Case.h" />
+		<Unit filename="CheckBox.cpp" />
+		<Unit filename="CheckBox.h" />
+		<Unit filename="Coin.cpp" />
+		<Unit filename="Coin.h" />
+		<Unit filename="Effet.cpp" />
+		<Unit filename="Effet.h" />
+		<Unit filename="Ennemi.cpp" />
+		<Unit filename="Ennemi.h" />
+		<Unit filename="EnnemiAlienBoss.cpp" />
+		<Unit filename="EnnemiAlienBoss.h" />
+		<Unit filename="EnnemiGhost.cpp" />
+		<Unit filename="EnnemiGhost.h" />
+		<Unit filename="EnnemiGiggler.cpp" />
+		<Unit filename="EnnemiGiggler.h" />
+		<Unit filename="EnnemiGunner.cpp" />
+		<Unit filename="EnnemiGunner.h" />
+		<Unit filename="EnnemiHeadBoss.cpp" />
+		<Unit filename="EnnemiHeadBoss.h" />
+		<Unit filename="EnnemiHumain.cpp" />
+		<Unit filename="EnnemiHumain.h" />
+		<Unit filename="EnnemiLizzy.cpp" />
+		<Unit filename="EnnemiLizzy.h" />
+		<Unit filename="EnnemiSarge.cpp" />
+		<Unit filename="EnnemiSarge.h" />
+		<Unit filename="EnnemiSkully.cpp" />
+		<Unit filename="EnnemiSkully.h" />
+		<Unit filename="EnnemiSmoulder.cpp" />
+		<Unit filename="EnnemiSmoulder.h" />
+		<Unit filename="EnnemiSoldier.cpp" />
+		<Unit filename="EnnemiSoldier.h" />
+		<Unit filename="EnnemiTaur.cpp" />
+		<Unit filename="EnnemiTaur.h" />
+		<Unit filename="EnnemiThing.cpp" />
+		<Unit filename="EnnemiThing.h" />
+		<Unit filename="EntryKiss.cpp" />
+		<Unit filename="EntryKiss.h" />
+		<Unit filename="EntryKissNetworkChat.cpp" />
+		<Unit filename="EntryKissNetworkChat.h" />
+		<Unit filename="Enumeration.h" />
+		<Unit filename="Exception_Network.cpp" />
+		<Unit filename="Exception_Network.h" />
+		<Unit filename="Explosion.cpp" />
+		<Unit filename="Explosion.h" />
+		<Unit filename="GroupCheckBox.cpp" />
+		<Unit filename="GroupCheckBox.h" />
+		<Unit filename="Input.h" />
+		<Unit filename="InputJoystick.h" />
+		<Unit filename="Jeu.cpp" />
+		<Unit filename="Jeu.h" />
+		<Unit filename="Lettre.cpp" />
+		<Unit filename="Lettre.h" />
+		<Unit filename="Libelle.cpp" />
+		<Unit filename="Libelle.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
+		<Unit filename="MenuFin.cpp" />
+		<Unit filename="MenuFin.h" />
+		<Unit filename="MenuGatherNetwork.cpp" />
+		<Unit filename="MenuGatherNetwork.h" />
+		<Unit filename="MenuJeu.cpp" />
+		<Unit filename="MenuJeu.h" />
+		<Unit filename="MenuJoinNetwork.cpp" />
+		<Unit filename="MenuJoinNetwork.h" />
+		<Unit filename="MenuMultiplayer.cpp" />
+		<Unit filename="MenuMultiplayer.h" />
+		<Unit filename="MenuOption.cpp" />
+		<Unit filename="MenuOption.h" />
+		<Unit filename="MenuPrepareNetworkGame.cpp" />
+		<Unit filename="MenuPrepareNetworkGame.h" />
+		<Unit filename="MenuPrincipal.cpp" />
+		<Unit filename="MenuPrincipal.h" />
+		<Unit filename="MenuTemplate.cpp" />
+		<Unit filename="MenuTemplate.h" />
+		<Unit filename="Network_Client.cpp" />
+		<Unit filename="Network_Client.h" />
+		<Unit filename="Network_Server.cpp" />
+		<Unit filename="Network_Server.h" />
+		<Unit filename="Personnage.cpp" />
+		<Unit filename="Personnage.h" />
+		<Unit filename="Projectile.cpp" />
+		<Unit filename="Projectile.h" />
+		<Unit filename="ProjectileBolt.cpp" />
+		<Unit filename="ProjectileBolt.h" />
+		<Unit filename="ProjectileEgg.cpp" />
+		<Unit filename="ProjectileEgg.h" />
+		<Unit filename="ProjectileFireBall.cpp" />
+		<Unit filename="ProjectileFireBall.h" />
+		<Unit filename="ProjectileFlame.cpp" />
+		<Unit filename="ProjectileFlame.h" />
+		<Unit filename="ProjectileHeadMissile.cpp" />
+		<Unit filename="ProjectileHeadMissile.h" />
+		<Unit filename="ProjectileMGShot.cpp" />
+		<Unit filename="ProjectileMGShot.h" />
+		<Unit filename="ProjectileMagma.cpp" />
+		<Unit filename="ProjectileMagma.h" />
+		<Unit filename="ProjectilePlasma.cpp" />
+		<Unit filename="ProjectilePlasma.h" />
+		<Unit filename="ProjectileShot.cpp" />
+		<Unit filename="ProjectileShot.h" />
+		<Unit filename="Resources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Score.cpp" />
+		<Unit filename="Score.h" />
+		<Unit filename="Teleporter.cpp" />
+		<Unit filename="Teleporter.h" />
+		<Unit filename="TextBox.cpp" />
+		<Unit filename="TextBox.h" />
+		<Unit filename="Transition.cpp" />
+		<Unit filename="Transition.h" />
+		<Unit filename="Utile.cpp" />
+		<Unit filename="Utile.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="VolumeBar.cpp" />
+		<Unit filename="VolumeBar.h" />
+		<Unit filename="Widget.cpp" />
+		<Unit filename="Widget.h" />
+		<Unit filename="kiss_draw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="kiss_general.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="kiss_posix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="kiss_sdl.h" />
+		<Unit filename="kiss_widgets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="tinyxml2.cpp" />
+		<Unit filename="tinyxml2.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="5" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
