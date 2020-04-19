@@ -54,6 +54,9 @@ nunit-*.xml
 [Rr]eleasePS/
 dlldata.c
 
+# Boom files
+*.boom
+
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
