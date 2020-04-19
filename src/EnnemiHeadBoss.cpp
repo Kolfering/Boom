@@ -22,6 +22,7 @@ EnnemiHeadBoss::EnnemiHeadBoss(Case* c) : Ennemi(c)
     intervalAtk = 3500;
     vitesse = 0;
     tempsFrameAtk = 250;
+    timeExplosion = 0;
     vie = 20;
     timeBlink = 0;
     nbFire = HEADBOSS_NBFIRE;

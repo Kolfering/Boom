@@ -111,11 +111,11 @@ MenuJeu::MenuJeu(Input* input,InputMouse* inputMouse,SDL_Window* screen) : Menu(
     transitionOn = false;
     pause = false;
     tempsPreparationNiveau = SDL_GetTicks();
-    sonHurry = Mix_LoadWAV("Sons/HurryUp.wav");
-    sonExtra = Mix_LoadWAV("Sons/EXTRAGame.wav");
-    sonGameOver = Mix_LoadWAV("Sons/GameOver.wav");
-    sonComplete = Mix_LoadWAV("Sons/CompleteLevel.wav");
-    sonTimeBonus = Mix_LoadWAV("Sons/TimeBonus.wav");
+    sonHurry = Mix_LoadWAV("../Sons/HurryUp.wav");
+    sonExtra = Mix_LoadWAV("../Sons/EXTRAGame.wav");
+    sonGameOver = Mix_LoadWAV("../Sons/GameOver.wav");
+    sonComplete = Mix_LoadWAV("../Sons/CompleteLevel.wav");
+    sonTimeBonus = Mix_LoadWAV("../Sons/TimeBonus.wav");
 
     if(!chargerPreferences())
     {
