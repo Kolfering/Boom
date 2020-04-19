@@ -126,6 +126,10 @@ $tf/
 # Guidance Automation Toolkit
 *.gpState
 
+# Codeblocks specific local config files
+*.depend
+*.layout
+
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
