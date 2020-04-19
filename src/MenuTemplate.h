@@ -7,6 +7,7 @@
 #include "kiss_sdl.h"
 #include "BoutonKiss.h"
 #include "EntryKiss.h"
+#include <string>
 #include <map>
 #include <vector>
 
