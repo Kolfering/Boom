@@ -53,7 +53,7 @@ Personnage::Personnage()
     this->casePersonnage = nullptr;
     meurt = false;
     counter = 0;
-    direction = BAS;
+    direction = Direction::BAS;
     this->caseToGo = nullptr;
 }
 
@@ -101,28 +101,28 @@ bool Personnage::aAtteintCase()
 {
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         if(getPosition().y <= caseToGo->getPositionPixel().y)
         {
             positionReal.y = caseToGo->getPositionPixel().y;
             return true;
         }
         break;
-    case BAS:
+    case Direction::BAS:
         if(getPosition().y >= caseToGo->getPositionPixel().y)
         {
             positionReal.y = caseToGo->getPositionPixel().y;
             return true;
         }
         break;
-    case DROITE:
+    case Direction::DROITE:
         if(getPosition().x >= caseToGo->getPositionPixel().x)
         {
             positionReal.x = caseToGo->getPositionPixel().x;
             return true;
         }
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         if(getPosition().x <= caseToGo->getPositionPixel().x)
         {
             positionReal.x = caseToGo->getPositionPixel().x;

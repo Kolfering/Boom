@@ -10,7 +10,7 @@ SDL_Texture* EnnemiSarge::image;
 
 EnnemiSarge::EnnemiSarge(Case* c) : EnnemiHumain(c)
 {
-    idEnnemi = SARGE;
+    idEnnemi = IDEnnemi::SARGE;
     score = 300;
     frameManagerBas = {0,0,4,11,100,0,1};
     frameManagerHaut = {4,0,4,11,100,0,1};

@@ -93,7 +93,7 @@ Ennemi* Carte::getBoss()
     {
         for(unsigned int i = 0;i<listeEnnemi.size();i++)
         {
-            if(listeEnnemi.at(i)->getIDEnnemi() == ALIENBOSS)
+            if(listeEnnemi.at(i)->getIDEnnemi() == IDEnnemi::ALIENBOSS)
             {
                 return listeEnnemi.at(i);
             }
@@ -186,16 +186,16 @@ bool Carte::chargerCarte(int niveau)
             xmlCase->QueryIntAttribute("Type",&type);
             typeCase = static_cast<TypeCase>(type);
 
-            if(type==COIN)
+            if(type== static_cast<Uint32>(TypeCase::COIN))
             {
                 coin = true;
-                typeCase = FOND;
+                typeCase = TypeCase::FOND;
             }
-            else if(type>COIN)
+            else if(type> static_cast<Uint32>(TypeCase::COIN))
             {
                 indiceTeleporter = type;
                 xmlCase->QueryIntAttribute("TeleportTo",&indiceTeleporterFrere);
-                typeCase = FOND;
+                typeCase = TypeCase::FOND;
             }
 
             SDL_Rect position;
@@ -293,7 +293,7 @@ bool Carte::chargerCarte(int niveau)
                 break;
             }
 
-            listeEnnemiLoad[t] = true;
+            listeEnnemiLoad[static_cast<Uint32>(t)] = true;
             xmlEnnemi = xmlEnnemi->NextSiblingElement("Ennemi");
         }
 
@@ -307,51 +307,51 @@ bool Carte::chargerCarte(int niveau)
         Bonus::initialiserBonus();
         Lettre::initialiserLettre();
 
-        if(listeEnnemiLoad[SOLDIER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SOLDIER)])
             EnnemiSoldier::initialiserEnnemiSoldier();
-        if(listeEnnemiLoad[SARGE])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SARGE)])
             EnnemiSarge::initialiserEnnemiSarge();
-        if(listeEnnemiLoad[SOLDIER] || listeEnnemiLoad[SARGE])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SOLDIER)] || listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SARGE)])
             ProjectileShot::initialiserProjectileShot();
-        if(listeEnnemiLoad[LIZZY])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::LIZZY)])
         {
             EnnemiLizzy::initialiserEnnemiLizzy();
             ProjectileFireBall::initialiserProjectileFireBall();
         }
-        if(listeEnnemiLoad[TAUR])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::TAUR)])
             EnnemiTaur::initialiserEnnemiTaur();
-        if(listeEnnemiLoad[GUNNER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GUNNER)])
         {
             ProjectileMGShot::initialiserProjectileMGShot();
             EnnemiGunner::initialiserEnnemiGunner();
         }
-        if(listeEnnemiLoad[THING])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::THING)])
         {
             ProjectileBolt::initialiserProjectileBolt();
             EnnemiThing::initialiserEnnemiThing();
         }
-        if(listeEnnemiLoad[GHOST])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GHOST)])
             EnnemiGhost::initialiserEnnemiGhost();
-        if(listeEnnemiLoad[SMOULDER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SMOULDER)])
         {
             EnnemiSmoulder::initialiserEnnemiSmoulder();
             ProjectileFlame::initialiserProjectileFlame();
         }
-        if(listeEnnemiLoad[SKULLY])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SKULLY)])
         {
             EnnemiSkully::initialiserEnnemiSkully();
             ProjectilePlasma::initialiserProjectilePlasma();
         }
-        if(listeEnnemiLoad[GIGGLER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GIGGLER)])
         {
             EnnemiGiggler::initialiserEnnemiGiggler();
             ProjectileMagma::initialiserProjectileMagma();
         }
-        if(listeEnnemiLoad[HEADBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::HEADBOSS)])
         {
             EnnemiHeadBoss::initialiserEnnemiHeadBoss();
         }
-        if(listeEnnemiLoad[ALIENBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::ALIENBOSS)])
         {
             boss = true;
             EnnemiAlienBoss::initialiserEnnemiAlienBoss();
@@ -374,7 +374,7 @@ bool Carte::chargerCarte(int niveau)
             EnnemiSarge::initialiserEnnemiSarge();
             EnnemiSoldier::initialiserEnnemiSoldier();
         }
-        if(listeEnnemiLoad[ALIENBOSS] || listeEnnemiLoad[HEADBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::ALIENBOSS)] || listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::HEADBOSS)])
             ProjectileHeadMissile::initialiserProjectileHeadMissile();
 
         hasNextLevel = xmlLevel->NextSiblingElement("Level");
@@ -431,13 +431,13 @@ bool Carte::chargerCarte(int niveau)
                 if(type==COIN)
                 {
                     coin = true;
-                    type = FOND;
+                    type = TypeCase::FOND;
                 }
                 else if(type>COIN)
                 {
                     indiceTeleporter = type;
                     fichier >> indiceTeleporterFrere;
-                    type = FOND;
+                    type = TypeCase::FOND;
                 }
                 SDL_Rect position;
                 position.x = CASE_DEPART_JEU_X + 32*j;
@@ -866,51 +866,51 @@ Carte::~Carte()
         Teleporter::releaseTeleporter();
     }
 
-        if(listeEnnemiLoad[SOLDIER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SOLDIER)])
             EnnemiSoldier::releaseEnnemiSoldier();
-        if(listeEnnemiLoad[SARGE])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SARGE)])
             EnnemiSarge::releaseEnnemiSarge();
-        if(listeEnnemiLoad[SOLDIER] || listeEnnemiLoad[SARGE])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SOLDIER)] || listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SARGE)])
             ProjectileShot::releaseProjectileShot();
-        if(listeEnnemiLoad[LIZZY])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::LIZZY)])
         {
              ProjectileFireBall::releaseProjectileFireBall();
              EnnemiLizzy::releaseEnnemiLizzy();
         }
-        if(listeEnnemiLoad[TAUR])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::TAUR)])
             EnnemiTaur::releaseEnnemiTaur();
-        if(listeEnnemiLoad[GUNNER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GUNNER)])
         {
             EnnemiGunner::releaseEnnemiGunner();
             ProjectileMGShot::releaseProjectileMGShot();
         }
-        if(listeEnnemiLoad[THING])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::THING)])
         {
             ProjectileBolt::releaseProjectileBolt();
             EnnemiThing::releaseEnnemiThing();
         }
-        if(listeEnnemiLoad[GHOST])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GHOST)])
             EnnemiGhost::releaseEnnemiGhost();
-        if(listeEnnemiLoad[SMOULDER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SMOULDER)])
         {
             EnnemiSmoulder::releaseEnnemiSmoulder();
             ProjectileFlame::releaseProjectileFlame();
         }
-        if(listeEnnemiLoad[SKULLY])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::SKULLY)])
         {
             EnnemiSkully::releaseEnnemiSkully();
             ProjectilePlasma::releaseProjectilePlasma();
         }
-        if(listeEnnemiLoad[GIGGLER])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::GIGGLER)])
         {
             EnnemiGiggler::releaseEnnemiGiggler();
             ProjectileMagma::releaseProjectileMagma();
         }
-        if(listeEnnemiLoad[HEADBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::HEADBOSS)])
         {
             EnnemiHeadBoss::releaseEnnemiHeadBoss();
         }
-        if(listeEnnemiLoad[ALIENBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::ALIENBOSS)])
         {
             EnnemiAlienBoss::releaseEnnemiAlienBoss();
             ProjectileEgg::releaseProjectileEgg();
@@ -932,7 +932,7 @@ Carte::~Carte()
             EnnemiSarge::releaseEnnemiSarge();
             EnnemiSoldier::releaseEnnemiSoldier();
         }
-        if(listeEnnemiLoad[HEADBOSS] || listeEnnemiLoad[ALIENBOSS])
+        if(listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::HEADBOSS)] || listeEnnemiLoad[static_cast<Uint32>(IDEnnemi::ALIENBOSS)])
         {
             ProjectileHeadMissile::releaseProjectileHeadMissile();
         }

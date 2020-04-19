@@ -1596,20 +1596,20 @@ void MenuJeu::afficherCaseBordure()
     SDL_Rect pos = {0,0,CASE_DIMENSION,CASE_DIMENSION};
     SDL_Rect antiPos = {0,0,CASE_DIMENSION,CASE_DIMENSION};
 
-    antiPos.x = BORDURE_COIN_HAUT_GAUCHE * CASE_DIMENSION;
+    antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_COIN_HAUT_GAUCHE) * CASE_DIMENSION;
     pos.x = CASE_DIMENSION*3;
     SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
 
-    antiPos.x = BORDURE_COIN_HAUT_DROITE * CASE_DIMENSION;
+    antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_COIN_HAUT_DROITE) * CASE_DIMENSION;
     pos.x = WINDOW_WIDTH - CASE_DIMENSION;
     SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
 
-    antiPos.x = BORDURE_COIN_BAS_GAUCHE * CASE_DIMENSION;
+    antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_COIN_BAS_GAUCHE) * CASE_DIMENSION;
     pos.x = CASE_DIMENSION*3;
     pos.y = WINDOW_HEIGHT - CASE_DIMENSION;
     SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
 
-    antiPos.x = BORDURE_COIN_BAS_DROITE * CASE_DIMENSION;
+    antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_COIN_BAS_DROITE) * CASE_DIMENSION;
     pos.x = WINDOW_WIDTH - CASE_DIMENSION;
     pos.y = WINDOW_HEIGHT - CASE_DIMENSION;
     SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
@@ -1618,9 +1618,9 @@ void MenuJeu::afficherCaseBordure()
     {
         pos.x = CASE_DIMENSION*3 + i*CASE_DIMENSION;
         pos.y = 0;
-        antiPos.x = BORDURE_HAUT * CASE_DIMENSION;
+        antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_HAUT) * CASE_DIMENSION;
         SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
-        antiPos.x = BORDURE_BAS * CASE_DIMENSION;
+        antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_BAS) * CASE_DIMENSION;
         pos.y = CASE_DIMENSION * (CASE_HAUTEUR+1);
         SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
     }
@@ -1628,10 +1628,10 @@ void MenuJeu::afficherCaseBordure()
     {
         pos.x = CASE_DIMENSION*3;
         pos.y = CASE_DIMENSION * i;
-        antiPos.x = BORDURE_GAUCHE * CASE_DIMENSION;
+        antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_GAUCHE) * CASE_DIMENSION;
         SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
         pos.x = CASE_DIMENSION*3 + CASE_DIMENSION * (CASE_LONGUEUR+1);
-        antiPos.x = BORDURE_DROITE * CASE_DIMENSION;
+        antiPos.x = static_cast<Uint32>(DirectionBordure::BORDURE_DROITE) * CASE_DIMENSION;
         SDL_RenderCopy(Jeu::getRenderer(),carte->getCaseBordure(),&antiPos,&pos);
     }
 }
@@ -1731,7 +1731,7 @@ void MenuJeu::afficherCaseFixe()
         for(int j = 1;j<=CASE_LONGUEUR;j++)
         {
             SDL_RenderCopy(Jeu::getRenderer(),Case::getImageFond(),0,Carte::getCase(i,j)->getAdressePositionPixel());
-            if(Carte::getCase(i,j)->getType() == DUR)
+            if(Carte::getCase(i,j)->getType() == TypeCase::DUR)
                 SDL_RenderCopy(Jeu::getRenderer(),Carte::getCase(i,j)->getImage(),Carte::getCase(i,j)->getAdresseAntiPositionPixel(),Carte::getCase(i,j)->getAdressePositionPixel());
         }
     }
@@ -1743,7 +1743,7 @@ void MenuJeu::afficherCaseCassable()
     {
         for(int j = 1;j<=CASE_LONGUEUR;j++)
         {
-            if(Carte::getCase(i,j)->getType() == CASSABLE)
+            if(Carte::getCase(i,j)->getType() == TypeCase::CASSABLE)
                 SDL_RenderCopy(Jeu::getRenderer(),Carte::getCase(i,j)->getImage(),Carte::getCase(i,j)->getAdresseAntiPositionPixel(),Carte::getCase(i,j)->getAdressePositionPixel());
         }
     }
@@ -1878,7 +1878,7 @@ void MenuJeu::executeCase()
     {
         for(unsigned int j = 1;j<=CASE_LONGUEUR;j++)
         {
-            if(Carte::getCase(i,j)->getType() == CASSABLE)
+            if(Carte::getCase(i,j)->getType() == TypeCase::CASSABLE)
                 Carte::getCase(i,j)->execute();
         }
     }

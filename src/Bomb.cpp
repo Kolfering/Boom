@@ -90,7 +90,7 @@ void Bomb::calculExplosion()
     {
         Mix_PlayChannel(-1,sonExplosion,0);
         aExplose = true;
-        listeExplosions.push_back(new Explosion(this,caseBomb,EXPLOSION_MILLIEU,COEF_DEGAT));
+        listeExplosions.push_back(new Explosion(this,caseBomb,DirectionExplosion::EXPLOSION_MILLIEU,COEF_DEGAT));
         Case* c;
         for(unsigned int i = 1;i<=bomber->getDistanceExplosion();i++)
         {
@@ -99,15 +99,15 @@ void Bomb::calculExplosion()
             if(c)
             {
 
-                if(c->getType() == FOND)
-                    listeExplosions.push_back(new Explosion(this,c,EXPLOSION_HAUT,COEF_DEGAT*i/2));
+                if(c->getType() == TypeCase::FOND)
+                    listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_HAUT,COEF_DEGAT*i/2));
 
 
                 else
                 {
-                    if(c->getType() == CASSABLE && i == 1)
+                    if(c->getType() == TypeCase::CASSABLE && i == 1)
                     {
-                        listeExplosions.push_back(new Explosion(this,c,EXPLOSION_HAUT,COEF_DEGAT*i/2));
+                        listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_HAUT,COEF_DEGAT*i/2));
                         c->setExplose(bomber);
                     }
                     break;
@@ -126,14 +126,14 @@ void Bomb::calculExplosion()
 
             if(c)
             {
-                if(c->getType() == FOND)
-                    listeExplosions.push_back(new Explosion(this,c,EXPLOSION_BAS,COEF_DEGAT*i/2));
+                if(c->getType() == TypeCase::FOND)
+                    listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_BAS,COEF_DEGAT*i/2));
 
                 else
                 {
-                    if(c->getType() == CASSABLE && i == 1)
+                    if(c->getType() == TypeCase::CASSABLE && i == 1)
                     {
-                        listeExplosions.push_back(new Explosion(this,c,EXPLOSION_BAS,COEF_DEGAT*i/2));
+                        listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_BAS,COEF_DEGAT*i/2));
                         c->setExplose(bomber);
                     }
                     break;
@@ -153,14 +153,14 @@ void Bomb::calculExplosion()
             if(c)
             {
 
-                if(c->getType() == FOND)
-                        listeExplosions.push_back(new Explosion(this,c,EXPLOSION_DROITE,COEF_DEGAT*i/2));
+                if(c->getType() == TypeCase::FOND)
+                        listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_DROITE,COEF_DEGAT*i/2));
 
                 else
                 {
-                    if(c->getType() == CASSABLE && i == 1)
+                    if(c->getType() == TypeCase::CASSABLE && i == 1)
                     {
-                        listeExplosions.push_back(new Explosion(this,c,EXPLOSION_DROITE,COEF_DEGAT*i/2));
+                        listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_DROITE,COEF_DEGAT*i/2));
                         c->setExplose(bomber);
                     }
                      break;
@@ -180,14 +180,14 @@ void Bomb::calculExplosion()
             if(c)
             {
 
-                if(c->getType() == FOND)
-                    listeExplosions.push_back(new Explosion(this,c,EXPLOSION_GAUCHE,COEF_DEGAT*i/2));
+                if(c->getType() == TypeCase::FOND)
+                    listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_GAUCHE,COEF_DEGAT*i/2));
 
                 else
                 {
-                    if(c->getType() == CASSABLE && i == 1)
+                    if(c->getType() == TypeCase::CASSABLE && i == 1)
                     {
-                        listeExplosions.push_back(new Explosion(this,c,EXPLOSION_GAUCHE,COEF_DEGAT*i/2));
+                        listeExplosions.push_back(new Explosion(this,c,DirectionExplosion::EXPLOSION_GAUCHE,COEF_DEGAT*i/2));
                         c->setExplose(bomber);
 
                     }

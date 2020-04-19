@@ -18,16 +18,16 @@ ProjectileFlame::ProjectileFlame(Ennemi* ennemi,Case* caseCollision,Position pos
 
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         frameManager = &frameManagerAtkHaut;
         break;
-    case BAS:
+    case Direction::BAS:
         frameManager = &frameManagerAtkBas;
         break;
-    case DROITE:
+    case Direction::DROITE:
         frameManager = &frameManagerAtkDroite;
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         frameManager = &frameManagerAtkGauche;
         break;
     default:

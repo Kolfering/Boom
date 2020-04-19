@@ -9,7 +9,7 @@ Mix_Chunk* EnnemiSoldier::sonRandom;
 SDL_Texture* EnnemiSoldier::image;
 EnnemiSoldier::EnnemiSoldier(Case* c) : EnnemiHumain(c)
 {
-    idEnnemi = SOLDIER;
+    idEnnemi = IDEnnemi::SOLDIER;
     score = 200;
     frameManagerBas = {0,0,4,11,100,0,1};
     frameManagerHaut = {4,0,4,11,100,0,1};

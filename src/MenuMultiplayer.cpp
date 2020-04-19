@@ -11,7 +11,7 @@ MenuMultiplayer::MenuMultiplayer(Input* input,InputMouse* inputMouse,SDL_Window*
    idMenu = IDMenu::MENU_MULTIPLAYER;
 
    int w,h,w2,h2,w3,h3,w4,h4;
-   BoutonRetour* boutonRetour = new BoutonRetour(this,MENU_PRINCIPAL);
+   BoutonRetour* boutonRetour = new BoutonRetour(this,IDMenu::MENU_PRINCIPAL);
    BoutonGatherOnline* boutonGatherOnline = new BoutonGatherOnline(this);
    BoutonJoinOnline* boutonJoinOnline = new BoutonJoinOnline(this);
 

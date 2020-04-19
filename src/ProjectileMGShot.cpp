@@ -18,19 +18,19 @@ ProjectileMGShot::ProjectileMGShot(Ennemi* ennemi,Case* caseCollision,Position p
 
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         frameManager = &frameManagerAtkHaut;
         dimensionProjectile = {7,10};
         break;
-    case BAS:
+    case Direction::BAS:
         frameManager = &frameManagerAtkBas;
         dimensionProjectile = {7,10};
         break;
-    case DROITE:
+    case Direction::DROITE:
         frameManager = &frameManagerAtkDroite;
         dimensionProjectile = {10,7};
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         frameManager = &frameManagerAtkGauche;
         dimensionProjectile = {10,7};
         break;

@@ -16,7 +16,7 @@ SDL_Texture* EnnemiAlienBoss::imageHurt;
 EnnemiAlienBoss::EnnemiAlienBoss(Case* c) : Ennemi(c)
 {
     alienable = false;
-    idEnnemi = ALIENBOSS;
+    idEnnemi = IDEnnemi::ALIENBOSS;
     score = 100000;
     frameManagerBas = {0,0,4,4,100,0,1};
     frameManagerHaut = {0,1,4,4,100,0,1};
@@ -108,19 +108,19 @@ std::vector<Case*> EnnemiAlienBoss::getCaseToGoOnList()
     std::vector<Case*> vec;
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
          for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(caseToGo->getPositionDamier().y,caseToGo->getPositionDamier().x+i));
         break;
-    case BAS:
+    case Direction::BAS:
         for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(caseToGo->getPositionDamier().y+4,caseToGo->getPositionDamier().x+i));
         break;
-    case DROITE:
+    case Direction::DROITE:
          for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(caseToGo->getPositionDamier().y+i,caseToGo->getPositionDamier().x+4));
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(caseToGo->getPositionDamier().y+i,caseToGo->getPositionDamier().x));
         break;
@@ -135,13 +135,13 @@ std::vector<Case*> EnnemiAlienBoss::getCasePrecedenteOnList()
     std::vector<Case*> vec;
     switch(direction)
     {
-    case HAUT:
-    case BAS:
+    case Direction::HAUT:
+    case Direction::BAS:
          for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(casePrecedente->getPositionDamier().y,casePrecedente->getPositionDamier().x+i));
         break;
-    case DROITE:
-    case GAUCHE:
+    case Direction::DROITE:
+    case Direction::GAUCHE:
          for(unsigned int i = 0;i<5;i++)
             vec.push_back(Carte::getCase(caseToGo->getPositionDamier().y+i,caseToGo->getPositionDamier().x));
         break;
@@ -198,15 +198,13 @@ void EnnemiAlienBoss::accelerer()
 
 bool EnnemiAlienBoss::attaque()
 {
-   /* if(Carte::getListeEnnemi().size()<30)
-    {*/
         Case* caseCollision = nullptr;
         switch(direction)
         {
-        case HAUT:
+        case Direction::HAUT:
             for(int i = casePersonnage->getPositionDamier().y;i<=CASE_HAUTEUR;i++)
             {
-                if(Carte::getCase(i,casePersonnage->getPositionDamier().x)->getType() != FOND)
+                if(Carte::getCase(i,casePersonnage->getPositionDamier().x)->getType() != TypeCase::FOND)
                 {
                     caseCollision = Carte::getCase(i,casePersonnage->getPositionDamier().x);
                     break;
@@ -217,10 +215,10 @@ bool EnnemiAlienBoss::attaque()
             freeDirection = true;
             Carte::ajouterProjectile(new ProjectileEgg(this,caseCollision,{positionReal.x + CASE_DIMENSION*2 +CASE_DIMENSION/2 ,positionReal.y + taille + CASE_DIMENSION/5},directionInverse));
             return true;
-        case BAS:
+        case Direction::BAS:
             for(int i = casePersonnage->getPositionDamier().y;i>=1;i--)
             {
-                if(Carte::getCase(i,casePersonnage->getPositionDamier().x)->getType() != FOND)
+                if(Carte::getCase(i,casePersonnage->getPositionDamier().x)->getType() != TypeCase::FOND)
                 {
                     caseCollision = Carte::getCase(i,casePersonnage->getPositionDamier().x);
                     break;
@@ -231,10 +229,10 @@ bool EnnemiAlienBoss::attaque()
             freeDirection = true;
             Carte::ajouterProjectile(new ProjectileEgg(this,caseCollision,{positionReal.x + CASE_DIMENSION*2 + CASE_DIMENSION/2,positionReal.y - CASE_DIMENSION/5},directionInverse));
             return true;
-        case DROITE:
+        case Direction::DROITE:
             for(int i = casePersonnage->getPositionDamier().x;i>=1;i--)
              {
-                if(Carte::getCase(casePersonnage->getPositionDamier().y,i)->getType() != FOND)
+                if(Carte::getCase(casePersonnage->getPositionDamier().y,i)->getType() != TypeCase::FOND)
                 {
                     caseCollision = Carte::getCase(casePersonnage->getPositionDamier().y,i);
                     break;
@@ -245,10 +243,10 @@ bool EnnemiAlienBoss::attaque()
             freeDirection = true;
             Carte::ajouterProjectile(new ProjectileEgg(this,caseCollision,{positionReal.x - CASE_DIMENSION/5 ,positionReal.y + CASE_DIMENSION*2 + CASE_DIMENSION/2},directionInverse));
             return true;
-        case GAUCHE:
+        case Direction::GAUCHE:
             for(int i = casePersonnage->getPositionDamier().x;i<=CASE_LONGUEUR;i++)
              {
-                if(Carte::getCase(casePersonnage->getPositionDamier().y,i)->getType() != FOND)
+                if(Carte::getCase(casePersonnage->getPositionDamier().y,i)->getType() != TypeCase::FOND)
                 {
                     caseCollision = Carte::getCase(casePersonnage->getPositionDamier().y,i);
                     break;
@@ -262,7 +260,6 @@ bool EnnemiAlienBoss::attaque()
         default:
             return false;
         }
-   // }
 }
 
 void EnnemiAlienBoss::prendreDegat(Bomber* bomber,unsigned int ID)
@@ -313,24 +310,24 @@ bool EnnemiAlienBoss::collision()
             {
                 switch(direction)
                 {
-                case HAUT:
+                case Direction::HAUT:
                     if(getPosition().y <= Carte::getListeEnnemi().at(i)->getPosition().y + Carte::getListeEnnemi().at(i)->getTaille())
                         return true;
 
                     break;
-                case BAS:
+                case Direction::BAS:
                     if(getPosition().y + taille  >= Carte::getListeEnnemi().at(i)->getPosition().y)
                        return true;
 
                     break;
-                case DROITE:
+                case Direction::DROITE:
 
                     if(getPosition().x + taille  >= Carte::getListeEnnemi().at(i)->getPosition().x)
                         return true;
 
 
                     break;
-                case GAUCHE:
+                case Direction::GAUCHE:
                     if(getPosition().x <= Carte::getListeEnnemi().at(i)->getPosition().x + Carte::getListeEnnemi().at(i)->getTaille())
                         return true;
 
@@ -343,7 +340,7 @@ bool EnnemiAlienBoss::collision()
 
             else if(caseToGo->getEnnemi())
             {
-                if(caseToGo->getEnnemi()->getIDEnnemi() == HEADBOSS)
+                if(caseToGo->getEnnemi()->getIDEnnemi() == IDEnnemi::HEADBOSS)
                       return true;
             }
 
@@ -363,7 +360,7 @@ void EnnemiAlienBoss::setCase(Case* casePersonnage)
     bool moveIn = true;
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
       c = Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x);
       for(unsigned int i = 0;i<listeCase.size();i++)
       {
@@ -397,7 +394,7 @@ void EnnemiAlienBoss::setCase(Case* casePersonnage)
         }
       }
         break;
-    case BAS:
+    case Direction::BAS:
       c = Carte::getCase(casePersonnage->getPositionDamier().y+4,casePersonnage->getPositionDamier().x);
       for(unsigned int i = 0;i<listeCase.size();i++)
       {
@@ -430,7 +427,7 @@ void EnnemiAlienBoss::setCase(Case* casePersonnage)
         }
       }
         break;
-    case DROITE:
+    case Direction::DROITE:
       c = Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+4);
       for(unsigned int i = 0;i<listeCase.size();i++)
       {
@@ -463,7 +460,7 @@ void EnnemiAlienBoss::setCase(Case* casePersonnage)
         }
       }
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
     c = Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x);
       for(unsigned int i = 0;i<listeCase.size();i++)
       {
@@ -559,16 +556,16 @@ void EnnemiAlienBoss::deplacerEnnemi() // Calcul direction
 
                switch(direction)
                {
-               case HAUT:
+               case Direction::HAUT:
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x));
                 break;
-               case BAS:
+               case Direction::BAS:
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x));
                 break;
-               case DROITE:
+               case Direction::DROITE:
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1));
                 break;
-               case GAUCHE:
+               case Direction::GAUCHE:
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1));
                 break;
                default:
@@ -578,28 +575,28 @@ void EnnemiAlienBoss::deplacerEnnemi() // Calcul direction
            }
            else
            {
-               if((direction != HAUT || freeDirection) && calculCleanArea(HAUT))
+               if((direction != Direction::HAUT || freeDirection) && calculCleanArea(Direction::HAUT))
                {
-                   listeDirection.push_back(HAUT);
-                   listeDirectionInverse.push_back(BAS);
+                   listeDirection.push_back(Direction::HAUT);
+                   listeDirectionInverse.push_back(Direction::BAS);
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x));
                }
-               if((direction != BAS || freeDirection) && calculCleanArea(BAS))
+               if((direction != Direction::BAS || freeDirection) && calculCleanArea(Direction::BAS))
                {
-                   listeDirection.push_back(BAS);
-                   listeDirectionInverse.push_back(HAUT);
+                   listeDirection.push_back(Direction::BAS);
+                   listeDirectionInverse.push_back(Direction::HAUT);
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x));
                }
-               if((direction != DROITE || freeDirection) && calculCleanArea(DROITE))
+               if((direction != Direction::DROITE || freeDirection) && calculCleanArea(Direction::DROITE))
                {
-                   listeDirection.push_back(DROITE);
-                   listeDirectionInverse.push_back(GAUCHE);
+                   listeDirection.push_back(Direction::DROITE);
+                   listeDirectionInverse.push_back(Direction::GAUCHE);
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1));
                }
-               if((direction != GAUCHE || freeDirection) && calculCleanArea(GAUCHE))
+               if((direction != Direction::GAUCHE || freeDirection) && calculCleanArea(Direction::GAUCHE))
                {
-                   listeDirection.push_back(GAUCHE);
-                   listeDirectionInverse.push_back(DROITE);
+                   listeDirection.push_back(Direction::GAUCHE);
+                   listeDirectionInverse.push_back(Direction::DROITE);
                    listeCaseDirection.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1));
                }
            }
@@ -647,43 +644,43 @@ bool EnnemiAlienBoss::calculCleanArea(Direction directionToCheck)
 {
     switch(directionToCheck)
     {
-    case HAUT:
+    case Direction::HAUT:
           for(int i = 0;i<5;i++)
           {
                 if(!Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x+i))
                     return false;
-                else if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x+i)->getType() != FOND)
+                else if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x+i)->getType() != TypeCase::FOND)
                     return false;
 
 
           }
         return true;
-    case BAS:
+    case Direction::BAS:
         for(int i = 0;i<5;i++)
         {
             if(!Carte::getCase(casePersonnage->getPositionDamier().y+5,casePersonnage->getPositionDamier().x+i))
                 return false;
-            else if(Carte::getCase(casePersonnage->getPositionDamier().y+5,casePersonnage->getPositionDamier().x+i)->getType() != FOND)
+            else if(Carte::getCase(casePersonnage->getPositionDamier().y+5,casePersonnage->getPositionDamier().x+i)->getType() != TypeCase::FOND)
                 return false;
 
        }
         return true;
-    case DROITE:
+    case Direction::DROITE:
         for(int i = 0;i<5;i++)
         {
             if(!Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x+5))
                return false;
-            else if(Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x+5)->getType() != FOND)
+            else if(Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x+5)->getType() != TypeCase::FOND)
                 return false;
 
         }
         return true;
-    case GAUCHE:
+    case Direction::GAUCHE:
          for(int i = 0;i<5;i++)
          {
             if(!Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x-1))
                 return false;
-            else if(Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x-1)->getType() != FOND)
+            else if(Carte::getCase(casePersonnage->getPositionDamier().y+i,casePersonnage->getPositionDamier().x-1)->getType() != TypeCase::FOND)
                 return false;
 
          }

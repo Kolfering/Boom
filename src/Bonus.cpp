@@ -213,7 +213,7 @@ void BonusEclair::calculEffet()
 
  if(getTime() - tempsEclair > VITESSE_ECLAIR)
  {
-    if(Carte::getCase(hauteur,longueur)->getType() == CASSABLE)
+    if(Carte::getCase(hauteur,longueur)->getType() == TypeCase::CASSABLE)
         Carte::getCase(hauteur,longueur)->setExplose(bomber);
 
     hauteur++;

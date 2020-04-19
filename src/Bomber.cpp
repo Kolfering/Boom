@@ -125,10 +125,10 @@ SDL_Rect* Bomber::getAdresseAntiPositionProtection()
     unsigned int v = 0;
     switch(direction)
     {
-    case DROITE:
+    case Direction::DROITE:
         v = 1;
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         v = 2;
         break;
     default:
@@ -408,7 +408,7 @@ void Bomber::deplacer(Input* in)
     {
         switch(direction)
         {
-            case HAUT:
+            case Direction::HAUT:
                   if(!compareFrameManager(*frameManager,frameManagerHaut))
                   {
                       counterFrame.x = frameManagerHaut.x;
@@ -417,7 +417,7 @@ void Bomber::deplacer(Input* in)
                   }
                 frameManager = &frameManagerHaut;
                 break;
-            case BAS:
+            case Direction::BAS:
                   if(!compareFrameManager(*frameManager,frameManagerBas))
                   {
                       counterFrame.x = frameManagerBas.x;
@@ -426,7 +426,7 @@ void Bomber::deplacer(Input* in)
                   }
                 frameManager = &frameManagerBas;
                 break;
-            case DROITE:
+            case Direction::DROITE:
                   if(!compareFrameManager(*frameManager,frameManagerDroite))
                   {
                       counterFrame.x = frameManagerDroite.x;
@@ -435,7 +435,7 @@ void Bomber::deplacer(Input* in)
                   }
                 frameManager = &frameManagerDroite;
                 break;
-            case GAUCHE:
+            case Direction::GAUCHE:
                   if(!compareFrameManager(*frameManager,frameManagerGauche))
                   {
                       counterFrame.x = frameManagerGauche.x;
@@ -459,7 +459,7 @@ void Bomber::deplacer(Input* in)
               counterFrame.nbLigne = 0;
           }
         frameManager = &frameManagerHaut;
-        deplacerDirection(HAUT);
+        deplacerDirection(Direction::HAUT);
     }
     else if(in->key[playerKeyboard.down])
     {
@@ -470,7 +470,7 @@ void Bomber::deplacer(Input* in)
               counterFrame.nbLigne = 0;
           }
         frameManager = &frameManagerBas;
-        deplacerDirection(BAS);
+        deplacerDirection(Direction::BAS);
     }
     else if(in->key[playerKeyboard.left])
     {
@@ -481,7 +481,7 @@ void Bomber::deplacer(Input* in)
               counterFrame.nbLigne = 0;
           }
         frameManager = &frameManagerGauche;
-        deplacerDirection(GAUCHE);
+        deplacerDirection(Direction::GAUCHE);
     }
     else if(in->key[playerKeyboard.right])
     {
@@ -492,13 +492,13 @@ void Bomber::deplacer(Input* in)
               counterFrame.nbLigne = 0;
           }
         frameManager = &frameManagerDroite;
-        deplacerDirection(DROITE);
+        deplacerDirection(Direction::DROITE);
     }
     else
     {
         enDeplacementVersCase = false;
         enDeplacement = false;
-        direction = BAS;
+        direction = Direction::BAS;
         counterFrame.nbLigne = 0;
 
         if(!celebration)
@@ -623,16 +623,16 @@ void Bomber::deplacerDirection(Direction direction)
 
         switch(direction)
         {
-        case HAUT :
+        case Direction::HAUT :
             c = Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x);
             break;
-        case BAS :
+        case Direction::BAS :
             c = Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x);
             break;
-        case DROITE :
+        case Direction::DROITE :
             c = Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1);
             break;
-        case GAUCHE :
+        case Direction::GAUCHE :
             c = Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1);
             break;
         default:
@@ -647,7 +647,7 @@ void Bomber::deplacerDirection(Direction direction)
 
         if(c!=nullptr)
         {
-            if(c->getType()==FOND)
+            if(c->getType()==TypeCase::FOND)
             {
                 if(!c->isReservee())
                 {
@@ -740,25 +740,25 @@ bool Bomber::debugTeleporter()
     {
         if(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x) != nullptr)
         {
-            if(!(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x)->getType() != FOND ||
+            if(!(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x)->getType() != TypeCase::FOND ||
                Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x)->getBomber() != nullptr))
                 return false;
         }
         if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x) != nullptr)
         {
-            if(!(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x)->getType() != FOND ||
+            if(!(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x)->getType() != TypeCase::FOND ||
                Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x)->getBomber() != nullptr))
                 return false;
         }
         if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1) != nullptr)
         {
-            if(!(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1)->getType() != FOND ||
+            if(!(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1)->getType() != TypeCase::FOND ||
                Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1)->getBomber() != nullptr))
                 return false;
         }
         if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1) != nullptr)
         {
-            if(!(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1)->getType() != FOND ||
+            if(!(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1)->getType() != TypeCase::FOND ||
                Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1)->getBomber() != nullptr))
                 return false;
         }
@@ -770,7 +770,7 @@ bool Bomber::debugTeleporter()
 bool Bomber::goToCase()
 {
 
-    if(caseToGo->getType()==CASSABLE || caseToGo->getType()==DUR)
+    if(caseToGo->getType()== TypeCase::CASSABLE || caseToGo->getType()==TypeCase::DUR)
         return true;
 
     if(caseToGo->getExplosion())
@@ -789,16 +789,16 @@ bool Bomber::goToCase()
 
     switch(direction)
     {
-    case HAUT :
+    case Direction::HAUT :
         positionReal.y-= vitesse;
         break;
-    case BAS :
+    case Direction::BAS :
         positionReal.y+= vitesse;
         break;
-    case DROITE :
+    case Direction::DROITE :
         positionReal.x+= vitesse;
         break;
-    case GAUCHE :
+    case Direction::GAUCHE :
         positionReal.x-= vitesse;
         break;
     default:

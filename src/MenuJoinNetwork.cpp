@@ -13,7 +13,7 @@ MenuJoinNetwork::MenuJoinNetwork(Input* input,InputMouse* inputMouse,SDL_Window*
    idMenu = IDMenu::MENU_JOINNETWORK;
 
    int w,h;
-   BoutonRetour* boutonRetour = new BoutonRetour(this,MENU_MULTIPLAYER);
+   BoutonRetour* boutonRetour = new BoutonRetour(this,IDMenu::MENU_MULTIPLAYER);
 
    SDL_QueryTexture(boutonRetour->getImage(),nullptr,nullptr,&w,&h);
 

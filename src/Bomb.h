@@ -15,8 +15,6 @@ private:
     Case* caseBomb;
     vector<Explosion*> listeExplosions;
     int timePose;
-    unsigned int timeAlerte;
-    unsigned int timeExplosion;
     unsigned int timeBefore;
     bool aExplose;
     static SDL_Texture* image;

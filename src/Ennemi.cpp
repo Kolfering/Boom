@@ -29,7 +29,7 @@ Ennemi::Ennemi(Case* caseEnnemi) : Personnage(caseEnnemi)
     degat = 1;
     frameAtk = true;
     standWhileAtk = false;
-    direction = UNDEFINED;
+    direction = Direction::UNDEFINED;
     frameManagerAlienBas = {0,0,4,9,100,0,1};
     frameManagerAlienHaut = {4,0,4,9,100,0,1};
     frameManagerAlienDroite = {8,0,4,9,100,0,1};
@@ -93,7 +93,7 @@ void Ennemi::setCase(Case* casePersonnage)
         if(casePersonnage->getTeleporter()->isAccessible())
         {
             if(casePersonnage->getTeleporter()->teleporter(this))
-                direction = UNDEFINED;
+                direction = Direction::UNDEFINED;
         }
     }
 
@@ -197,16 +197,16 @@ if(getTime() - tempsDerniereAtk > tempsFrameAtk)
         {
             switch(direction)
             {
-            case HAUT :
+            case Direction::HAUT :
                 positionReal.y-= vitesse;
                 break;
-            case BAS :
+            case Direction::BAS :
                 positionReal.y+= vitesse;
                 break;
-            case DROITE :
+            case Direction::DROITE :
                 positionReal.x+= vitesse;
                 break;
-            case GAUCHE :
+            case Direction::GAUCHE :
                 positionReal.x-= vitesse;
                 break;
             default :
@@ -227,7 +227,7 @@ if(!alienMode || !alienable)
     {
             switch(direction)
             {
-            case HAUT :
+            case Direction::HAUT :
                 if(!compareFrameManager(*frameManager,frameManagerHaut))
                 {
                      counterFrame.x = frameManagerHaut.x;
@@ -236,7 +236,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerHaut;
                 break;
-            case BAS :
+            case Direction::BAS :
                 if(!compareFrameManager(*frameManager,frameManagerBas))
                 {
                      counterFrame.x = frameManagerBas.x;
@@ -245,7 +245,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerBas;
                 break;
-            case DROITE :
+            case Direction::DROITE :
                 if(!compareFrameManager(*frameManager,frameManagerDroite))
                 {
                      counterFrame.x = frameManagerDroite.x;
@@ -254,7 +254,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerDroite;
                 break;
-            case GAUCHE :
+            case Direction::GAUCHE :
                 if(!compareFrameManager(*frameManager,frameManagerGauche))
                 {
                      counterFrame.x = frameManagerGauche.x;
@@ -271,7 +271,7 @@ if(!alienMode || !alienable)
     {
          switch(directionAtk)
             {
-            case HAUT :
+            case Direction::HAUT :
                 if(!compareFrameManager(*frameManager,frameManagerAtkHaut))
                 {
                      counterFrame.x = frameManagerAtkHaut.x;
@@ -280,7 +280,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerAtkHaut;
                 break;
-            case BAS :
+            case Direction::BAS :
                 if(!compareFrameManager(*frameManager,frameManagerAtkBas))
                 {
                      counterFrame.x = frameManagerAtkBas.x;
@@ -289,7 +289,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerAtkBas;
                 break;
-            case DROITE :
+            case Direction::DROITE :
                 if(!compareFrameManager(*frameManager,frameManagerAtkDroite))
                 {
                      counterFrame.x = frameManagerAtkDroite.x;
@@ -298,7 +298,7 @@ if(!alienMode || !alienable)
                 }
                 frameManager = &frameManagerAtkDroite;
                 break;
-            case GAUCHE :
+            case Direction::GAUCHE :
                 if(!compareFrameManager(*frameManager,frameManagerAtkGauche))
                 {
                      counterFrame.x = frameManagerAtkGauche.x;
@@ -316,7 +316,7 @@ else
 {
     switch(direction)
     {
-    case HAUT :
+    case Direction::HAUT :
         if(!compareFrameManager(*frameManager,frameManagerAlienHaut))
         {
              counterFrame.x = frameManagerAlienHaut.x;
@@ -325,7 +325,7 @@ else
         }
         frameManager = &frameManagerAlienHaut;
         break;
-    case BAS :
+    case Direction::BAS :
         if(!compareFrameManager(*frameManager,frameManagerAlienBas))
         {
              counterFrame.x = frameManagerAlienBas.x;
@@ -334,7 +334,7 @@ else
         }
         frameManager = &frameManagerAlienBas;
         break;
-    case DROITE :
+    case Direction::DROITE :
         if(!compareFrameManager(*frameManager,frameManagerAlienDroite))
         {
              counterFrame.x = frameManagerAlienDroite.x;
@@ -343,7 +343,7 @@ else
         }
         frameManager = &frameManagerAlienDroite;
         break;
-    case GAUCHE :
+    case Direction::GAUCHE :
         if(!compareFrameManager(*frameManager,frameManagerAlienGauche))
         {
              counterFrame.x = frameManagerAlienGauche.x;
@@ -414,24 +414,24 @@ bool Ennemi::collision()
             {
                 switch(direction)
                 {
-                case HAUT:
+                case Direction::HAUT:
                     if(getPosition().y <= Carte::getListeEnnemi().at(i)->getPosition().y + Carte::getListeEnnemi().at(i)->getTaille())
                         return true;
 
                     break;
-                case BAS:
+                case Direction::BAS:
                     if(getPosition().y + taille  >= Carte::getListeEnnemi().at(i)->getPosition().y)
                        return true;
 
                     break;
-                case DROITE:
+                case Direction::DROITE:
 
                     if(getPosition().x + taille  >= Carte::getListeEnnemi().at(i)->getPosition().x)
                         return true;
 
 
                     break;
-                case GAUCHE:
+                case Direction::GAUCHE:
                     if(getPosition().x <= Carte::getListeEnnemi().at(i)->getPosition().x + Carte::getListeEnnemi().at(i)->getTaille())
                         return true;
 
@@ -444,7 +444,7 @@ bool Ennemi::collision()
 
             else if(caseToGo->getEnnemi())
             {
-                if(caseToGo->getEnnemi()->getIDEnnemi() == HEADBOSS)
+                if(caseToGo->getEnnemi()->getIDEnnemi() == IDEnnemi::HEADBOSS)
                       return true;
             }
 

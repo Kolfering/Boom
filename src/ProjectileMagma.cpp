@@ -18,19 +18,19 @@ ProjectileMagma::ProjectileMagma(Ennemi* ennemi,Case* caseCollision,Position pos
 
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         frameManager = &frameManagerAtkHaut;
         dimensionProjectile = {26,26};
         break;
-    case BAS:
+    case Direction::BAS:
         frameManager = &frameManagerAtkBas;
         dimensionProjectile = {26,26};
         break;
-    case DROITE:
+    case Direction::DROITE:
         frameManager = &frameManagerAtkDroite;
         dimensionProjectile = {26,26};
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         frameManager = &frameManagerAtkGauche;
         dimensionProjectile = {26,26};
         break;

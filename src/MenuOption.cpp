@@ -20,7 +20,7 @@ MenuOption::MenuOption(Input* input,InputMouse* inputMouse,SDL_Window* sdl_windo
    idMenu = IDMenu::MENU_OPTION;
 
    int w,h;
-   BoutonRetour* boutonRetour = new BoutonRetour(this,MENU_PRINCIPAL);
+   BoutonRetour* boutonRetour = new BoutonRetour(this,IDMenu::MENU_PRINCIPAL);
 
    SDL_QueryTexture(boutonRetour->getImage(),nullptr,nullptr,&w,&h);
 

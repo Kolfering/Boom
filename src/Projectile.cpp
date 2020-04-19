@@ -21,7 +21,7 @@ Projectile::Projectile(Position pos)
     caseCollision = nullptr;
     positionReal = pos;
     fini = false;
-    direction = UNDEFINED;
+    direction = Direction::UNDEFINED;
 }
 
 Projectile::~Projectile()
@@ -126,10 +126,10 @@ void Projectile::deplacer()
         {
             switch(direction)
             {
-            case HAUT:
+            case Direction::HAUT:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() == DUR ||caseCollision->getType() == CASSABLE)
+                    if(caseCollision->getType() == TypeCase::DUR ||caseCollision->getType() == TypeCase::CASSABLE)
                     {
                         if(positionReal.y + dimension.y/2 < caseCollision->getPositionPixel().y + CASE_DIMENSION)
                         {
@@ -141,7 +141,7 @@ void Projectile::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().y;i>=1;i--)
                         {
-                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == CASSABLE)
+                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::CASSABLE)
                             {
                                 if(positionReal.y + dimension.y/2 < Carte::getCase(i,caseCollision->getPositionDamier().x)->getPositionPixel().y + CASE_DIMENSION)
                                 {
@@ -162,10 +162,10 @@ void Projectile::deplacer()
                 positionReal.y -= vitesse;
                 distanceRange += vitesse;
                 break;
-            case BAS:
+            case Direction::BAS:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() == DUR ||caseCollision->getType() == CASSABLE)
+                    if(caseCollision->getType() == TypeCase::DUR ||caseCollision->getType() == TypeCase::CASSABLE)
                     {
                         if(positionReal.y +dimension.y/2 > caseCollision->getPositionPixel().y)
                         {
@@ -177,7 +177,7 @@ void Projectile::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().y;i<=CASE_HAUTEUR;i++)
                         {
-                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == CASSABLE)
+                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::CASSABLE)
                             {
                                 if(positionReal.y + dimension.y/2 > Carte::getCase(i,caseCollision->getPositionDamier().x)->getPositionPixel().y)
                                 {
@@ -198,10 +198,10 @@ void Projectile::deplacer()
                 positionReal.y += vitesse;
                 distanceRange += vitesse;
                 break;
-            case GAUCHE:
+            case Direction::GAUCHE:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() == DUR ||caseCollision->getType() == CASSABLE)
+                    if(caseCollision->getType() == TypeCase::DUR ||caseCollision->getType() == TypeCase::CASSABLE)
                     {
                         if(positionReal.x +dimension.x/2 < caseCollision->getPositionPixel().x + CASE_DIMENSION)
                         {
@@ -213,7 +213,7 @@ void Projectile::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().x;i>=1;i--)
                         {
-                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == CASSABLE)
+                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::CASSABLE)
                             {
                                  if(positionReal.x + dimension.y/2 < Carte::getCase(caseCollision->getPositionDamier().y,i)->getPositionPixel().x + CASE_DIMENSION)
                                 {
@@ -234,10 +234,10 @@ void Projectile::deplacer()
                 positionReal.x -= vitesse;
                 distanceRange += vitesse;
                 break;
-            case DROITE:
+            case Direction::DROITE:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() == DUR ||caseCollision->getType() == CASSABLE)
+                    if(caseCollision->getType() == TypeCase::DUR ||caseCollision->getType() == TypeCase::CASSABLE)
                     {
                         if(positionReal.x +dimension.x/2> caseCollision->getPositionPixel().x)
                         {
@@ -249,7 +249,7 @@ void Projectile::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().x;i<=CASE_LONGUEUR;i++)
                         {
-                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == CASSABLE)
+                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::CASSABLE)
                             {
 
                                 if(positionReal.x + dimension.y/2 > Carte::getCase(caseCollision->getPositionDamier().y,i)->getPositionPixel().x)

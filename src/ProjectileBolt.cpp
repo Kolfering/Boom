@@ -18,16 +18,16 @@ ProjectileBolt::ProjectileBolt(Ennemi* ennemi,Case* caseCollision,Position posit
 
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         frameManager = &frameManagerAtkHaut;
         break;
-    case BAS:
+    case Direction::BAS:
         frameManager = &frameManagerAtkBas;
         break;
-    case DROITE:
+    case Direction::DROITE:
         frameManager = &frameManagerAtkDroite;
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         frameManager = &frameManagerAtkGauche;
         break;
     default:

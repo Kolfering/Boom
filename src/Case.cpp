@@ -126,10 +126,10 @@ TypeCase Case::getType()
 }
 SDL_Texture* Case::getImage()
 {
-    if(type==DUR)
+    if(type==TypeCase::DUR)
         return imageDur;
 
-    if(type==CASSABLE)
+    if(type==TypeCase::CASSABLE)
         return imageCassable;
 
     return imageFond;
@@ -146,15 +146,15 @@ SDL_Rect* Case::getAdresseAntiPositionPixel()
 {
    switch(type)
     {
-    case FOND:
+    case TypeCase::FOND:
         antiPositionPixel.x = 0;
         antiPositionPixel.y = 0;
         break;
-    case DUR:
+    case TypeCase::DUR:
         antiPositionPixel.x = case_dur*CASE_DIMENSION;
         antiPositionPixel.y = 0;
         break;
-    case CASSABLE:
+    case TypeCase::CASSABLE:
         antiPositionPixel.x = counter*CASE_DIMENSION;
         antiPositionPixel.y = case_cassable*CASE_DIMENSION;
         break;
@@ -207,7 +207,7 @@ void Case::calculNextFrame(unsigned int nbFrame)
         {
             explose = false;
             cassee = true;
-            type = FOND;
+            type = TypeCase::FOND;
             counter = 0;
             calculApparitionBonus();
         }

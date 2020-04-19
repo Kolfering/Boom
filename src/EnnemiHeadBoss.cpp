@@ -15,7 +15,7 @@ SDL_Texture* EnnemiHeadBoss::imageHurt;
 EnnemiHeadBoss::EnnemiHeadBoss(Case* c) : Ennemi(c)
 {
     alienable = false;
-    idEnnemi = HEADBOSS;
+    idEnnemi = IDEnnemi::HEADBOSS;
     score = 5000;
     degat = 16;
     taille = CASE_DIMENSION*3;

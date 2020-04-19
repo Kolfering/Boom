@@ -32,16 +32,16 @@ ProjectileEgg::ProjectileEgg(Ennemi* ennemi,Case* caseCollision,Position positio
 
     switch(direction)
     {
-    case HAUT:
+    case Direction::HAUT:
         frameManager = &frameManagerAtkHaut;
         break;
-    case BAS:
+    case Direction::BAS:
         frameManager = &frameManagerAtkBas;
         break;
-    case DROITE:
+    case Direction::DROITE:
         frameManager = &frameManagerAtkDroite;
         break;
-    case GAUCHE:
+    case Direction::GAUCHE:
         frameManager = &frameManagerAtkGauche;
         break;
     default:
@@ -97,10 +97,10 @@ void ProjectileEgg::deplacer()
         {
             switch(direction)
             {
-            case HAUT:
+            case Direction::HAUT:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() != FOND)
+                    if(caseCollision->getType() != TypeCase::FOND)
                     {
                         if(positionReal.y + dimension.y/2 < caseCollision->getPositionPixel().y + CASE_DIMENSION)
                         {
@@ -112,7 +112,7 @@ void ProjectileEgg::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().y;i>=1;i--)
                         {
-                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == CASSABLE)
+                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::CASSABLE)
                             {
                                 if(positionReal.y + dimension.y/2 < Carte::getCase(i,caseCollision->getPositionDamier().x)->getPositionPixel().y + CASE_DIMENSION)
                                 {
@@ -133,10 +133,10 @@ void ProjectileEgg::deplacer()
                 positionReal.y -= vitesse;
                 distanceRange += vitesse;
                 break;
-            case BAS:
+            case Direction::BAS:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() != FOND)
+                    if(caseCollision->getType() != TypeCase::FOND)
                     {
                         if(positionReal.y +dimension.y/2 > caseCollision->getPositionPixel().y)
                         {
@@ -148,7 +148,7 @@ void ProjectileEgg::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().y;i<=CASE_HAUTEUR;i++)
                         {
-                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == CASSABLE)
+                            if(Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::DUR || Carte::getCase(i,caseCollision->getPositionDamier().x)->getType() == TypeCase::CASSABLE)
                             {
                                 if(positionReal.y + dimension.y/2 > Carte::getCase(i,caseCollision->getPositionDamier().x)->getPositionPixel().y)
                                 {
@@ -169,10 +169,10 @@ void ProjectileEgg::deplacer()
                 positionReal.y += vitesse;
                 distanceRange += vitesse;
                 break;
-            case GAUCHE:
+            case Direction::GAUCHE:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() != FOND)
+                    if(caseCollision->getType() != TypeCase::FOND)
                     {
                         if(positionReal.x +dimension.x/2 < caseCollision->getPositionPixel().x + CASE_DIMENSION)
                         {
@@ -184,7 +184,7 @@ void ProjectileEgg::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().x;i>=1;i--)
                         {
-                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == CASSABLE)
+                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::CASSABLE)
                             {
                                  if(positionReal.x + dimension.y/2 < Carte::getCase(caseCollision->getPositionDamier().y,i)->getPositionPixel().x + CASE_DIMENSION)
                                 {
@@ -205,10 +205,10 @@ void ProjectileEgg::deplacer()
                 positionReal.x -= vitesse;
                 distanceRange += vitesse;
                 break;
-            case DROITE:
+            case Direction::DROITE:
                 if(caseCollision)
                 {
-                    if(caseCollision->getType() != FOND)
+                    if(caseCollision->getType() != TypeCase::FOND)
                     {
                         if(positionReal.x +dimension.x/2> caseCollision->getPositionPixel().x)
                         {
@@ -220,7 +220,7 @@ void ProjectileEgg::deplacer()
                     {
                         for(unsigned int i = caseCollision->getPositionDamier().x;i<=CASE_LONGUEUR;i++)
                         {
-                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == CASSABLE)
+                            if(Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::DUR || Carte::getCase(caseCollision->getPositionDamier().y,i)->getType() == TypeCase::CASSABLE)
                             {
 
                                 if(positionReal.x + dimension.y/2 > Carte::getCase(caseCollision->getPositionDamier().y,i)->getPositionPixel().x)
@@ -298,7 +298,7 @@ void ProjectileEgg::spawnEnnemi()
     Case* c = Carte::getCaseByPixel(position.y,position.x);
     if(c)
     {
-        if(c->getType() == FOND && !c->getEnnemi())
+        if(c->getType() == TypeCase::FOND && !c->getEnnemi())
         {
             check = true;
         }
@@ -307,16 +307,16 @@ void ProjectileEgg::spawnEnnemi()
     {
         switch(direction)
         {
-            case HAUT:
+            case Direction::HAUT:
                 c = Carte::getCaseByPixel(position.y + CASE_DIMENSION,position.x);
                 break;
-            case BAS:
+            case Direction::BAS:
                 c = Carte::getCaseByPixel(position.y - CASE_DIMENSION,position.x);
                 break;
-            case DROITE:
+            case Direction::DROITE:
                 c = Carte::getCaseByPixel(position.y,position.x - CASE_DIMENSION);
                 break;
-            case GAUCHE:
+            case Direction::GAUCHE:
                 c = Carte::getCaseByPixel(position.y,position.x + CASE_DIMENSION);
                 break;
             default:
@@ -328,16 +328,16 @@ void ProjectileEgg::spawnEnnemi()
     {
         switch(direction)
         {
-        case HAUT:
+        case Direction::HAUT:
             c = Carte::getCase(c->getPositionDamier().y+1,c->getPositionDamier().x);
             break;
-        case BAS:
+        case Direction::BAS:
             c = Carte::getCase(c->getPositionDamier().y-1,c->getPositionDamier().x);
             break;
-        case DROITE:
+        case Direction::DROITE:
             c = Carte::getCase(c->getPositionDamier().y,c->getPositionDamier().x-1);
             break;
-        case GAUCHE:
+        case Direction::GAUCHE:
             c = Carte::getCase(c->getPositionDamier().y,c->getPositionDamier().x+1);
             break;
         default:
@@ -350,7 +350,7 @@ void ProjectileEgg::spawnEnnemi()
 
     if(c)
     {
-        if(c->getType() == FOND && !c->getEnnemi())
+        if(c->getType() == TypeCase::FOND && !c->getEnnemi())
         {
 
             unsigned int nb = genererNombreAleatoire(10) - 1;
@@ -359,34 +359,34 @@ void ProjectileEgg::spawnEnnemi()
             Ennemi* ennemi;
             switch(id)
             {
-                case SOLDIER:
+                case IDEnnemi::SOLDIER:
                     ennemi = new EnnemiSoldier(c);
                     break;
-                case SARGE:
+                case IDEnnemi::SARGE:
                     ennemi = new EnnemiSarge(c);
                     break;
-                case LIZZY:
+                case IDEnnemi::LIZZY:
                     ennemi = new EnnemiLizzy(c);
                     break;
-                case TAUR:
+                case IDEnnemi::TAUR:
                     ennemi = new EnnemiTaur(c);
                     break;
-                case GUNNER:
+                case IDEnnemi::GUNNER:
                     ennemi = new EnnemiGunner(c);
                     break;
-                case THING:
+                case IDEnnemi::THING:
                     ennemi = new EnnemiThing(c);
                     break;
-                case GHOST:
+                case IDEnnemi::GHOST:
                     ennemi = new EnnemiGhost(c);
                     break;
-                case SMOULDER:
+                case IDEnnemi::SMOULDER:
                     ennemi = new EnnemiSmoulder(c);
                     break;
-                case SKULLY:
+                case IDEnnemi::SKULLY:
                     ennemi = new EnnemiSkully(c);
                     break;
-                case GIGGLER:
+                case IDEnnemi::GIGGLER:
                     ennemi = new EnnemiGiggler(c);
                     break;
                 default:

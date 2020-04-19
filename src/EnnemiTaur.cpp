@@ -10,7 +10,7 @@ Mix_Chunk* EnnemiTaur::sonMort;
 SDL_Texture* EnnemiTaur::image;
 EnnemiTaur::EnnemiTaur(Case* c) : Ennemi(c)
 {
-    idEnnemi = TAUR;
+    idEnnemi = IDEnnemi::TAUR;
     score = 500;
     frameManagerBas = {0,0,4,11,100,0,1};
     frameManagerHaut = {4,0,4,11,100,0,1};
@@ -89,7 +89,7 @@ bool EnnemiTaur::attaque()
         {
             switch(direction)
             {
-            case HAUT:
+            case Direction::HAUT:
                 if(getPosition().y < b->getPosition().y + CASE_DIMENSION)
                 {
                       attacked = true;
@@ -97,7 +97,7 @@ bool EnnemiTaur::attaque()
                 }
 
                 break;
-            case BAS:
+            case Direction::BAS:
                 if(getPosition().y + CASE_DIMENSION > b->getPosition().y)
                 {
                       attacked = true;
@@ -105,7 +105,7 @@ bool EnnemiTaur::attaque()
                 }
 
                 break;
-            case DROITE:
+            case Direction::DROITE:
                 if(getPosition().x + CASE_DIMENSION > b->getPosition().x)
                 {
                       attacked = true;
@@ -113,7 +113,7 @@ bool EnnemiTaur::attaque()
                 }
 
                 break;
-            case GAUCHE:
+            case Direction::GAUCHE:
                 if(getPosition().x < b->getPosition().x + CASE_DIMENSION)
                 {
                       attacked = true;
@@ -152,13 +152,13 @@ void EnnemiTaur::deplacerEnnemi() // Calcul direction
            vector<Direction> listeDirectionInverse;
            if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x))
            {
-               if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x)->getType() == FOND)
+               if(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x)->getType() == TypeCase::FOND)
                {
-                   if(BAS!=direction)
+                   if(Direction::BAS!=direction)
                    {
-                    listeDirection.push_back(HAUT);
+                    listeDirection.push_back(Direction::HAUT);
                     listeCase.push_back(Carte::getCase(casePersonnage->getPositionDamier().y-1,casePersonnage->getPositionDamier().x));
-                    listeDirectionInverse.push_back(BAS);
+                    listeDirectionInverse.push_back(Direction::BAS);
                    }
 
 
@@ -166,13 +166,13 @@ void EnnemiTaur::deplacerEnnemi() // Calcul direction
            }
            if(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x))
            {
-               if(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x)->getType() == FOND)
+               if(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x)->getType() == TypeCase::FOND)
                {
-                   if(HAUT!=direction)
+                   if(Direction::HAUT!=direction)
                    {
-                    listeDirection.push_back(BAS);
+                    listeDirection.push_back(Direction::BAS);
                     listeCase.push_back(Carte::getCase(casePersonnage->getPositionDamier().y+1,casePersonnage->getPositionDamier().x));
-                    listeDirectionInverse.push_back(HAUT);
+                    listeDirectionInverse.push_back(Direction::HAUT);
                    }
 
 
@@ -180,26 +180,26 @@ void EnnemiTaur::deplacerEnnemi() // Calcul direction
            }
           if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1))
            {
-               if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1)->getType() == FOND)
+               if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1)->getType() == TypeCase::FOND)
                {
-                   if(GAUCHE!=direction)
+                   if(Direction::GAUCHE!=direction)
                    {
-                    listeDirection.push_back(DROITE);
+                    listeDirection.push_back(Direction::DROITE);
                     listeCase.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x+1));
-                    listeDirectionInverse.push_back(GAUCHE);
+                    listeDirectionInverse.push_back(Direction::GAUCHE);
                    }
 
                }
            }
            if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1))
            {
-               if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1)->getType() == FOND)
+               if(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1)->getType() == TypeCase::FOND)
                {
-                   if(DROITE!=direction)
+                   if(Direction::DROITE!=direction)
                    {
-                    listeDirection.push_back(GAUCHE);
+                    listeDirection.push_back(Direction::GAUCHE);
                     listeCase.push_back(Carte::getCase(casePersonnage->getPositionDamier().y,casePersonnage->getPositionDamier().x-1));
-                    listeDirectionInverse.push_back(DROITE);
+                    listeDirectionInverse.push_back(Direction::DROITE);
                    }
 
                }

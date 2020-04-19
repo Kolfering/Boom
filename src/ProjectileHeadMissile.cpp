@@ -10,7 +10,7 @@ ProjectileHeadMissile::~ProjectileHeadMissile()
 
 }
 
-ProjectileHeadMissile::ProjectileHeadMissile(Ennemi* ennemi,Case* caseCollision,Position position,Position cible) : Projectile(ennemi,caseCollision,position,UNDEFINED)
+ProjectileHeadMissile::ProjectileHeadMissile(Ennemi* ennemi,Case* caseCollision,Position position,Position cible) : Projectile(ennemi,caseCollision,position,Direction::UNDEFINED)
 {
     frameManagerAtkBas = {0,0,2,7,50,0,1};
     frameManagerAtkHaut = {0,0,2,7,50,0,1};
@@ -99,7 +99,7 @@ void ProjectileHeadMissile::deplacer()
         {
             if(Carte::getListeEnnemi().at(i) != ennemi)
             {
-                if(Carte::getListeEnnemi().at(i)->getIDEnnemi() != HEADBOSS)
+                if(Carte::getListeEnnemi().at(i)->getIDEnnemi() != IDEnnemi::HEADBOSS)
                 {
                     if(positionReal.y + dimension.y/2 < Carte::getListeEnnemi().at(i)->getPosition().y + CASE_DIMENSION && positionReal.y + dimension.y/2 > Carte::getListeEnnemi().at(i)->getPosition().y &&positionReal.x + dimension.x/2 > Carte::getListeEnnemi().at(i)->getPosition().x && positionReal.x + dimension.x/2 < Carte::getListeEnnemi().at(i)->getPosition().x + CASE_DIMENSION)
                     {

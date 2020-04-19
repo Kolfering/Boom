@@ -22,7 +22,7 @@ Explosion::Explosion(Bomb* bombe,Case* casePositionExplosion,DirectionExplosion 
     antiPosition.h = TAILLE_SPRITE_EXPLOSION;
     antiPosition.w = TAILLE_SPRITE_EXPLOSION;
     antiPosition.x = counter * TAILLE_SPRITE_EXPLOSION;
-    antiPosition.y = directionExplosion * TAILLE_SPRITE_EXPLOSION;
+    antiPosition.y = static_cast<Uint32>(directionExplosion) * TAILLE_SPRITE_EXPLOSION;
 }
 
 void Explosion::initialiserExplosion()
@@ -73,7 +73,7 @@ void Explosion::execute()
     detectionPersonnage();
     calculNextFrame();
     antiPosition.x = counter * TAILLE_SPRITE_EXPLOSION;
-    antiPosition.y = directionExplosion * TAILLE_SPRITE_EXPLOSION;
+    antiPosition.y = static_cast<Uint32>(directionExplosion) * TAILLE_SPRITE_EXPLOSION;
 
 }
 
