@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{583F173F-B18F-4628-BE15-8A1A3B55667F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="Bomber.cpp" />
+    <ClCompile Include="Bonus.cpp" />
+    <ClCompile Include="Bouton.cpp" />
+    <ClCompile Include="BoutonContinue.cpp" />
+    <ClCompile Include="BoutonGatherOnline.cpp" />
+    <ClCompile Include="BoutonJoinOnline.cpp" />
+    <ClCompile Include="BoutonKiss.cpp" />
+    <ClCompile Include="BoutonKiss_GatherStart.cpp" />
+    <ClCompile Include="BoutonKiss_JoinStart.cpp" />
+    <ClCompile Include="BoutonMultiplayer.cpp" />
+    <ClCompile Include="BoutonNouvellePartie.cpp" />
+    <ClCompile Include="BoutonOption.cpp" />
+    <ClCompile Include="BoutonQuitter.cpp" />
+    <ClCompile Include="BoutonRetour.cpp" />
+    <ClCompile Include="Carte.cpp" />
+    <ClCompile Include="Case.cpp" />
+    <ClCompile Include="CheckBox.cpp" />
+    <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Effet.cpp" />
+    <ClCompile Include="Ennemi.cpp" />
+    <ClCompile Include="EnnemiAlienBoss.cpp" />
+    <ClCompile Include="EnnemiGhost.cpp" />
+    <ClCompile Include="EnnemiGiggler.cpp" />
+    <ClCompile Include="EnnemiGunner.cpp" />
+    <ClCompile Include="EnnemiHeadBoss.cpp" />
+    <ClCompile Include="EnnemiHumain.cpp" />
+    <ClCompile Include="EnnemiLizzy.cpp" />
+    <ClCompile Include="EnnemiSarge.cpp" />
+    <ClCompile Include="EnnemiSkully.cpp" />
+    <ClCompile Include="EnnemiSmoulder.cpp" />
+    <ClCompile Include="EnnemiSoldier.cpp" />
+    <ClCompile Include="EnnemiTaur.cpp" />
+    <ClCompile Include="EnnemiThing.cpp" />
+    <ClCompile Include="EntryKiss.cpp" />
+    <ClCompile Include="EntryKissNetworkChat.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="GroupCheckBox.cpp" />
+    <ClCompile Include="Jeu.cpp" />
+    <ClCompile Include="kiss_draw.c" />
+    <ClCompile Include="kiss_general.c" />
+    <ClCompile Include="kiss_posix.c" />
+    <ClCompile Include="kiss_widgets.c" />
+    <ClCompile Include="Lettre.cpp" />
+    <ClCompile Include="Libelle.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuFin.cpp" />
+    <ClCompile Include="MenuGatherNetwork.cpp" />
+    <ClCompile Include="MenuJeu.cpp" />
+    <ClCompile Include="MenuJoinNetwork.cpp" />
+    <ClCompile Include="MenuMultiplayer.cpp" />
+    <ClCompile Include="MenuOption.cpp" />
+    <ClCompile Include="MenuPrepareNetworkGame.cpp" />
+    <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="MenuTemplate.cpp" />
+    <ClCompile Include="Network_Client.cpp" />
+    <ClCompile Include="Network_Server.cpp" />
+    <ClCompile Include="Personnage.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ProjectileBolt.cpp" />
+    <ClCompile Include="ProjectileEgg.cpp" />
+    <ClCompile Include="ProjectileFireBall.cpp" />
+    <ClCompile Include="ProjectileFlame.cpp" />
+    <ClCompile Include="ProjectileHeadMissile.cpp" />
+    <ClCompile Include="ProjectileMagma.cpp" />
+    <ClCompile Include="ProjectileMGShot.cpp" />
+    <ClCompile Include="ProjectilePlasma.cpp" />
+    <ClCompile Include="ProjectileShot.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="Teleporter.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="Transition.cpp" />
+    <ClCompile Include="Utile.cpp" />
+    <ClCompile Include="VolumeBar.cpp" />
+    <ClCompile Include="Widget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="Bomber.h" />
+    <ClInclude Include="Bonus.h" />
+    <ClInclude Include="Bouton.h" />
+    <ClInclude Include="BoutonContinue.h" />
+    <ClInclude Include="BoutonGatherOnline.h" />
+    <ClInclude Include="BoutonJoinOnline.h" />
+    <ClInclude Include="BoutonKiss.h" />
+    <ClInclude Include="BoutonKiss_GatherStart.h" />
+    <ClInclude Include="BoutonKiss_JoinStart.h" />
+    <ClInclude Include="BoutonMultiplayer.h" />
+    <ClInclude Include="BoutonNouvellePartie.h" />
+    <ClInclude Include="BoutonOption.h" />
+    <ClInclude Include="BoutonQuitter.h" />
+    <ClInclude Include="BoutonRetour.h" />
+    <ClInclude Include="Carte.h" />
+    <ClInclude Include="Case.h" />
+    <ClInclude Include="CheckBox.h" />
+    <ClInclude Include="Coin.h" />
+    <ClInclude Include="Effet.h" />
+    <ClInclude Include="Ennemi.h" />
+    <ClInclude Include="EnnemiAlienBoss.h" />
+    <ClInclude Include="EnnemiGhost.h" />
+    <ClInclude Include="EnnemiGiggler.h" />
+    <ClInclude Include="EnnemiGunner.h" />
+    <ClInclude Include="EnnemiHeadBoss.h" />
+    <ClInclude Include="EnnemiHumain.h" />
+    <ClInclude Include="EnnemiLizzy.h" />
+    <ClInclude Include="EnnemiSarge.h" />
+    <ClInclude Include="EnnemiSkully.h" />
+    <ClInclude Include="EnnemiSmoulder.h" />
+    <ClInclude Include="EnnemiSoldier.h" />
+    <ClInclude Include="EnnemiTaur.h" />
+    <ClInclude Include="EnnemiThing.h" />
+    <ClInclude Include="EntryKiss.h" />
+    <ClInclude Include="EntryKissNetworkChat.h" />
+    <ClInclude Include="Enumeration.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="GroupCheckBox.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Jeu.h" />
+    <ClInclude Include="kiss_sdl.h" />
+    <ClInclude Include="Lettre.h" />
+    <ClInclude Include="Libelle.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuFin.h" />
+    <ClInclude Include="MenuGatherNetwork.h" />
+    <ClInclude Include="MenuJeu.h" />
+    <ClInclude Include="MenuJoinNetwork.h" />
+    <ClInclude Include="MenuMultiplayer.h" />
+    <ClInclude Include="MenuOption.h" />
+    <ClInclude Include="MenuPrepareNetworkGame.h" />
+    <ClInclude Include="MenuPrincipal.h" />
+    <ClInclude Include="MenuTemplate.h" />
+    <ClInclude Include="Network_Client.h" />
+    <ClInclude Include="Network_Server.h" />
+    <ClInclude Include="Personnage.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ProjectileBolt.h" />
+    <ClInclude Include="ProjectileEgg.h" />
+    <ClInclude Include="ProjectileFireBall.h" />
+    <ClInclude Include="ProjectileFlame.h" />
+    <ClInclude Include="ProjectileHeadMissile.h" />
+    <ClInclude Include="ProjectileMagma.h" />
+    <ClInclude Include="ProjectileMGShot.h" />
+    <ClInclude Include="ProjectilePlasma.h" />
+    <ClInclude Include="ProjectileShot.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="Teleporter.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="Transition.h" />
+    <ClInclude Include="Utile.h" />
+    <ClInclude Include="VolumeBar.h" />
+    <ClInclude Include="Widget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets" Condition="Exists('packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" />
+    <Import Project="packages\sdl2.2.0.5\build\native\sdl2.targets" Condition="Exists('packages\sdl2.2.0.5\build\native\sdl2.targets')" />
+    <Import Project="packages\sdl2_ttf.nuget.redist.2.0.15\build\native\sdl2_ttf.nuget.redist.targets" Condition="Exists('packages\sdl2_ttf.nuget.redist.2.0.15\build\native\sdl2_ttf.nuget.redist.targets')" />
+    <Import Project="packages\sdl2_ttf.nuget.2.0.15\build\native\sdl2_ttf.nuget.targets" Condition="Exists('packages\sdl2_ttf.nuget.2.0.15\build\native\sdl2_ttf.nuget.targets')" />
+    <Import Project="packages\sdl2_image.nuget.redist.2.0.5\build\native\sdl2_image.nuget.redist.targets" Condition="Exists('packages\sdl2_image.nuget.redist.2.0.5\build\native\sdl2_image.nuget.redist.targets')" />
+    <Import Project="packages\sdl2_image.nuget.2.0.5\build\native\sdl2_image.nuget.targets" Condition="Exists('packages\sdl2_image.nuget.2.0.5\build\native\sdl2_image.nuget.targets')" />
+    <Import Project="packages\sdl2_mixer.nuget.redist.2.0.4\build\native\sdl2_mixer.nuget.redist.targets" Condition="Exists('packages\sdl2_mixer.nuget.redist.2.0.4\build\native\sdl2_mixer.nuget.redist.targets')" />
+    <Import Project="packages\sdl2_mixer.nuget.2.0.4\build\native\sdl2_mixer.nuget.targets" Condition="Exists('packages\sdl2_mixer.nuget.2.0.4\build\native\sdl2_mixer.nuget.targets')" />
+    <Import Project="packages\sdl2_net.nuget.redist.2.0.1.2\build\native\sdl2_net.nuget.redist.targets" Condition="Exists('packages\sdl2_net.nuget.redist.2.0.1.2\build\native\sdl2_net.nuget.redist.targets')" />
+    <Import Project="packages\sdl2_net.nuget.2.0.1.2\build\native\sdl2_net.nuget.targets" Condition="Exists('packages\sdl2_net.nuget.2.0.1.2\build\native\sdl2_net.nuget.targets')" />
+    <Import Project="packages\sdl2.nuget.redist.2.0.12\build\native\sdl2.nuget.redist.targets" Condition="Exists('packages\sdl2.nuget.redist.2.0.12\build\native\sdl2.nuget.redist.targets')" />
+    <Import Project="packages\sdl2.nuget.2.0.12\build\native\sdl2.nuget.targets" Condition="Exists('packages\sdl2.nuget.2.0.12\build\native\sdl2.nuget.targets')" />
+    <Import Project="packages\boost.1.72.0.0\build\boost.targets" Condition="Exists('packages\boost.1.72.0.0\build\boost.targets')" />
+    <Import Project="packages\boost_serialization-vc142.1.72.0.0\build\boost_serialization-vc142.targets" Condition="Exists('packages\boost_serialization-vc142.1.72.0.0\build\boost_serialization-vc142.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2.2.0.5\build\native\sdl2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.2.0.5\build\native\sdl2.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_ttf.nuget.redist.2.0.15\build\native\sdl2_ttf.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_ttf.nuget.redist.2.0.15\build\native\sdl2_ttf.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_ttf.nuget.2.0.15\build\native\sdl2_ttf.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_ttf.nuget.2.0.15\build\native\sdl2_ttf.nuget.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_image.nuget.redist.2.0.5\build\native\sdl2_image.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_image.nuget.redist.2.0.5\build\native\sdl2_image.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_image.nuget.2.0.5\build\native\sdl2_image.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_image.nuget.2.0.5\build\native\sdl2_image.nuget.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_mixer.nuget.redist.2.0.4\build\native\sdl2_mixer.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_mixer.nuget.redist.2.0.4\build\native\sdl2_mixer.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_mixer.nuget.2.0.4\build\native\sdl2_mixer.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_mixer.nuget.2.0.4\build\native\sdl2_mixer.nuget.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_net.nuget.redist.2.0.1.2\build\native\sdl2_net.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_net.nuget.redist.2.0.1.2\build\native\sdl2_net.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2_net.nuget.2.0.1.2\build\native\sdl2_net.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2_net.nuget.2.0.1.2\build\native\sdl2_net.nuget.targets'))" />
+    <Error Condition="!Exists('packages\sdl2.nuget.redist.2.0.12\build\native\sdl2.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.redist.2.0.12\build\native\sdl2.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2.nuget.2.0.12\build\native\sdl2.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.2.0.12\build\native\sdl2.nuget.targets'))" />
+    <Error Condition="!Exists('packages\boost.1.72.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost.1.72.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('packages\boost_serialization-vc142.1.72.0.0\build\boost_serialization-vc142.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_serialization-vc142.1.72.0.0\build\boost_serialization-vc142.targets'))" />
+  </Target>
+</Project>
