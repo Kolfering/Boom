@@ -5,8 +5,8 @@
 
 TextBox::TextBox(Menu* menu,SDL_Scancode val) : Widget(menu)
 {
-    image[0] = chargerSurface("Images/textbox.png");
-    image[1] = chargerSurface("Images/textbox2.png");
+    image[0] = chargerSurface("../Images/textbox.png");
+    image[1] = chargerSurface("../Images/textbox2.png");
     int w,h;
     SDL_QueryTexture(image[0],nullptr,nullptr,&w,&h);
     position.w = w;

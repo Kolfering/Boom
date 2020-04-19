@@ -62,8 +62,8 @@ SDL_Texture* ProjectileMGShot::getImage()
 }
 void ProjectileMGShot::initialiserProjectileMGShot()
 {
-    sonHit = Mix_LoadWAV("Sons/PulseHit.wav");
-    image = chargerSurface("Images/MGShot.png");
+    sonHit = Mix_LoadWAV("../Sons/PulseHit.wav");
+    image = chargerSurface("../Images/MGShot.png");
 }
 
 void ProjectileMGShot::releaseProjectileMGShot()

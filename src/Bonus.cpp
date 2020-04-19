@@ -30,7 +30,7 @@ SDL_Rect* Bonus::getAdresseAntiPosition()
 }
 void Bonus::initialiserBonus()
 {
-    image = chargerSurface("Images/Bonuses.png");
+    image = chargerSurface("../Images/Bonuses.png");
     BonusEclair::initialiserEclair();
 }
 

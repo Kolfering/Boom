@@ -24,7 +24,7 @@ MenuJoinNetwork::MenuJoinNetwork(Input* input,InputMouse* inputMouse,SDL_Window*
    listeWidget["boutonRetour"] = boutonRetour;
 
    int w2,h2;
-   SDL_Texture* logo = chargerSurface("Images/BOOMLogo.png");
+   SDL_Texture* logo = chargerSurface("../Images/BOOMLogo.png");
    SDL_QueryTexture(logo,nullptr,nullptr,&w2,&h2);
    SDL_Rect positionLogo = {WINDOW_WIDTH/2 - w2/2,h2/5,w2,h2};
    listeTexture[logo] = positionLogo;

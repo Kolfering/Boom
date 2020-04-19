@@ -59,8 +59,8 @@ SDL_Texture* ProjectileBolt::getImage()
 }
 void ProjectileBolt::initialiserProjectileBolt()
 {
-    sonHit = Mix_LoadWAV("Sons/BoltHit.wav");
-    image = chargerSurface("Images/Lightbolt.png");
+    sonHit = Mix_LoadWAV("../Sons/BoltHit.wav");
+    image = chargerSurface("../Images/Lightbolt.png");
 }
 
 void ProjectileBolt::releaseProjectileBolt()

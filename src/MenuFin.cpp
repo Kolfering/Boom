@@ -32,7 +32,7 @@ MenuFin::MenuFin(Input* input,InputMouse* inputMouse,SDL_Window* screen) : MenuT
 
 
 
-    backGround = chargerSurface("Images/BGFin.png");
+    backGround = chargerSurface("../Images/BGFin.png");
 
 
     SDL_QueryTexture(libelleRights->getImage(),nullptr,nullptr,&w5,&h5);

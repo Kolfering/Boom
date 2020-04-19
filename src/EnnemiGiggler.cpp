@@ -35,10 +35,10 @@ EnnemiGiggler::EnnemiGiggler(Case* c) : Ennemi(c)
 
 void EnnemiGiggler::initialiserEnnemiGiggler()
 {
-    image = chargerSurface("Images/Giggler.png");
-    sonAtk = Mix_LoadWAV("Sons/Magma.wav");
-    sonRandom = Mix_LoadWAV("Sons/GigglerNoise.wav");
-    sonMort = Mix_LoadWAV("Sons/GigglerDeath.wav");
+    image = chargerSurface("../Images/Giggler.png");
+    sonAtk = Mix_LoadWAV("../Sons/Magma.wav");
+    sonRandom = Mix_LoadWAV("../Sons/GigglerNoise.wav");
+    sonMort = Mix_LoadWAV("../Sons/GigglerDeath.wav");
 }
 
 Mix_Chunk* EnnemiGiggler::getSonRandom()

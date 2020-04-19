@@ -37,9 +37,9 @@ EnnemiGhost::EnnemiGhost(Case* c) : Ennemi(c)
 
 void EnnemiGhost::initialiserEnnemiGhost()
 {
-    image = chargerSurface("Images/Ghost.png");
-    sonAtk = Mix_LoadWAV("Sons/GhostNoise.wav");
-    sonMort = Mix_LoadWAV("Sons/GhostDeath.wav");
+    image = chargerSurface("../Images/Ghost.png");
+    sonAtk = Mix_LoadWAV("../Sons/GhostNoise.wav");
+    sonMort = Mix_LoadWAV("../Sons/GhostDeath.wav");
 }
 
 Mix_Chunk* EnnemiGhost::getSonRandom()

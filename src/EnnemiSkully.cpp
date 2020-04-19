@@ -35,10 +35,10 @@ EnnemiSkully::EnnemiSkully(Case* c) : Ennemi(c)
 
 void EnnemiSkully::initialiserEnnemiSkully()
 {
-    image = chargerSurface("Images/Skully.png");
-    sonAtk = Mix_LoadWAV("Sons/Plasma.wav");
-    sonRandom = Mix_LoadWAV("Sons/SkullyNoise.wav");
-    sonMort = Mix_LoadWAV("Sons/SkullyDeath.wav");
+    image = chargerSurface("../Images/Skully.png");
+    sonAtk = Mix_LoadWAV("../Sons/Plasma.wav");
+    sonRandom = Mix_LoadWAV("../Sons/SkullyNoise.wav");
+    sonMort = Mix_LoadWAV("../Sons/SkullyDeath.wav");
 }
 
 Mix_Chunk* EnnemiSkully::getSonRandom()

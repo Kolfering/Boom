@@ -4,8 +4,8 @@
 
 CheckBox::CheckBox(Menu* menu,bool val) : Widget(menu)
 {
-    image[0] = chargerSurface("Images/boxvide.png");
-    image[1] = chargerSurface("Images/boxremplie.png");
+    image[0] = chargerSurface("../Images/boxvide.png");
+    image[1] = chargerSurface("../Images/boxremplie.png");
     int w,h;
     SDL_QueryTexture(image[0],nullptr,nullptr,&w,&h);
     position.w = w;

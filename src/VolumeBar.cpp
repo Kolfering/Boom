@@ -3,7 +3,7 @@
 
 VolumeBar::VolumeBar(Menu* menu,float value) : Widget(menu)
 {
-    image = chargerSurface("Images/volumeBar.png");
+    image = chargerSurface("../Images/volumeBar.png");
     SDL_QueryTexture(image,nullptr,nullptr,&position.w,&position.h);
     this->value = value;
     this->menu = menu;
@@ -70,7 +70,7 @@ SDL_Texture* VolumeBar::getImage()
 
 VolumeGrab::VolumeGrab(Menu* menu) : Widget(menu)
 {
-    image = chargerSurface("Images/volumeBall.png");
+    image = chargerSurface("../Images/volumeBall.png");
     SDL_QueryTexture(image,nullptr,nullptr,&position.w,&position.h);
 }
 

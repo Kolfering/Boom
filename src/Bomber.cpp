@@ -40,9 +40,9 @@ Bomber::Bomber() : Personnage()
     position.h = CASE_DIMENSION;
 
     if(player==1)
-        image = chargerSurface("Images/player1.png");
+        image = chargerSurface("../Images/player1.png");
     else
-         image = chargerSurface("Images/player2.png");
+         image = chargerSurface("../Images/player2.png");
 
 
     frameManagerBas = {0,0,8,19,80,0,1};
@@ -60,17 +60,17 @@ Bomber::Bomber() : Personnage()
     if(player==1)
     {
         playerKeyboard = {SDL_SCANCODE_W,SDL_SCANCODE_S,SDL_SCANCODE_D,SDL_SCANCODE_A,SDL_SCANCODE_SPACE};
-        sonHurt = Mix_LoadWAV("Sons/P1Ouch.wav");
-        sonMort = Mix_LoadWAV("Sons/P1Death.wav");
-        sonComplete = Mix_LoadWAV("Sons/P1Complete.wav");
+        sonHurt = Mix_LoadWAV("../Sons/P1Ouch.wav");
+        sonMort = Mix_LoadWAV("../Sons/P1Death.wav");
+        sonComplete = Mix_LoadWAV("../Sons/P1Complete.wav");
 
     }
     else
     {
         playerKeyboard = {SDL_SCANCODE_UP,SDL_SCANCODE_DOWN,SDL_SCANCODE_RIGHT,SDL_SCANCODE_LEFT,SDL_SCANCODE_RCTRL};
-        sonHurt = Mix_LoadWAV("Sons/P2Ouch.wav");
-        sonMort = Mix_LoadWAV("Sons/P2Death.wav");
-        sonComplete = Mix_LoadWAV("Sons/P2Complete.wav");
+        sonHurt = Mix_LoadWAV("../Sons/P2Ouch.wav");
+        sonMort = Mix_LoadWAV("../Sons/P2Death.wav");
+        sonComplete = Mix_LoadWAV("../Sons/P2Complete.wav");
     }
 
 
@@ -104,11 +104,11 @@ void Bomber::releaseBomber()
 
 void Bomber::initialiserBomber()
 {
-    imageProtection = chargerSurface("Images/shield.png");
-    sonLettre = Mix_LoadWAV("Sons/GetLetter.wav");
-    sonMegaVie = Mix_LoadWAV("Sons/ExtraLife.wav");
-    sonBombe = Mix_LoadWAV("Sons/LightTheFuse.wav");
-    sonBonus = Mix_LoadWAV("Sons/GetBonus.wav");
+    imageProtection = chargerSurface("../Images/shield.png");
+    sonLettre = Mix_LoadWAV("../Sons/GetLetter.wav");
+    sonMegaVie = Mix_LoadWAV("../Sons/ExtraLife.wav");
+    sonBombe = Mix_LoadWAV("../Sons/LightTheFuse.wav");
+    sonBonus = Mix_LoadWAV("../Sons/GetBonus.wav");
 }
 
 

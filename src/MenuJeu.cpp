@@ -26,16 +26,16 @@ MenuJeu::MenuJeu(Input* input,InputMouse* inputMouse,SDL_Window* screen) : Menu(
 {
     idMenu = IDMenu::MENU_JEU;
 
-    police = TTF_OpenFont("Fonts/lucon.ttf",20);
-    policeBonus = TTF_OpenFont("Fonts/lucon.ttf",11);
-    coeur = chargerSurface("Images/Heart.png");
-    extraGame = chargerSurface("Images/EXTRAGame.png");
-    hurryUp = chargerSurface("Images/HurryUp.png");
-    gameOver = chargerSurface("Images/GameOver.png");
-    hudLetter = chargerSurface("Images/EXTRAIcons.png");
-    bonusHUD = chargerSurface("Images/Bonus_Icons.png");
-    player1Head = chargerSurface("Images/player1Head.png");
-    player2Head = chargerSurface("Images/player2Head.png");
+    police = TTF_OpenFont("../Fonts/lucon.ttf",20);
+    policeBonus = TTF_OpenFont("../Fonts/lucon.ttf",11);
+    coeur = chargerSurface("../Images/Heart.png");
+    extraGame = chargerSurface("../Images/EXTRAGame.png");
+    hurryUp = chargerSurface("../Images/HurryUp.png");
+    gameOver = chargerSurface("../Images/GameOver.png");
+    hudLetter = chargerSurface("../Images/EXTRAIcons.png");
+    bonusHUD = chargerSurface("../Images/Bonus_Icons.png");
+    player1Head = chargerSurface("../Images/player1Head.png");
+    player2Head = chargerSurface("../Images/player2Head.png");
     SDL_Surface* scoreLabelTmp = TTF_RenderText_Shaded(police,"score",COLOR_POLICE_HUD,COLOR_BG_JOUEUR);
     SDL_Surface* gameOverLabel1Tmp = TTF_RenderText_Shaded(police,"GAME",COLOR_POLICE_HUD,COLOR_BG_JOUEUR);
     SDL_Surface* gameOverLabel2Tmp = TTF_RenderText_Shaded(police,"OVER",COLOR_POLICE_HUD,COLOR_BG_JOUEUR);

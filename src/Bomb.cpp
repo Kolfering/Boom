@@ -21,8 +21,8 @@ Bomb::Bomb(Bomber* bomber,Case* caseBomb)
 
 void Bomb::initialiserBombe()
 {
-    image = chargerSurface("Images/bomb.png");
-    sonExplosion = Mix_LoadWAV("Sons/Explosion.wav");
+    image = chargerSurface("../Images/bomb.png");
+    sonExplosion = Mix_LoadWAV("../Sons/Explosion.wav");
     Mix_VolumeChunk(sonExplosion,MIX_MAX_VOLUME/2);
 }
 

@@ -45,10 +45,10 @@ Mix_Chunk* EnnemiSoldier::getSonRandom()
 
 void EnnemiSoldier::initialiserEnnemiSoldier()
 {
-    image = chargerSurface("Images/soldier.png");
-    sonMort = Mix_LoadWAV("Sons/SoldierDeath.wav");
-    sonRandom = Mix_LoadWAV("Sons/SoldierNoise.wav");
-    sonAtk = Mix_LoadWAV("Sons/Shot.wav");
+    image = chargerSurface("../Images/soldier.png");
+    sonMort = Mix_LoadWAV("../Sons/SoldierDeath.wav");
+    sonRandom = Mix_LoadWAV("../Sons/SoldierNoise.wav");
+    sonAtk = Mix_LoadWAV("../Sons/Shot.wav");
 }
 
 void EnnemiSoldier::releaseEnnemiSoldier()

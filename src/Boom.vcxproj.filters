@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Sons">
+      <UniqueIdentifier>{c8fbc666-bbc2-441f-a931-a3550275ddf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Niveaux">
+      <UniqueIdentifier>{f8c66e26-b8b4-40a2-9793-de8c31051d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Musiques">
+      <UniqueIdentifier>{cf5a6165-f3fb-47d8-83b3-9dd285419594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Images">
+      <UniqueIdentifier>{7d413810-754b-475b-a062-2159a862157a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{063bc206-d77f-484f-812a-3949011b5a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Images\Kiss">
+      <UniqueIdentifier>{c1d702ab-7bac-428c-83bc-f2ec4f89e388}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bomb.cpp">
@@ -476,5 +494,547 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="..\Musiques\BOOM_Music_1.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_2.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_3.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_4.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_5.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_6.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_7.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+    <None Include="..\Musiques\BOOM_Music_8.ogg">
+      <Filter>Resource Files\Musiques</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Sons\AlienDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\BlockDestruction.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Bolt.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\BoltHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\BossDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\BossNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Coin.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\CompleteLevel.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Egg.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\EggCrack.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Explosion.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\EXTRAGame.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\ExtraLife.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Fireball.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\FireballHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Flame.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\FlameHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GameOver.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GetBonus.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GetLetter.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GhostDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GhostNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GigglerDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GigglerNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GunnerDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\GunnerNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\HeadDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\HeadNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\HeadShot.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\HeadShotHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\HurryUp.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\LightTheFuse.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\LizzyDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\LizzyNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Magma.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\MagmaHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P1Complete.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P1Death.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P1Ouch.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P2Complete.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P2Death.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\P2Ouch.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Plasma.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\PlasmaHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Pulse.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\PulseHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SargeDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SargeDeath2.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SargeNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Shot.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\ShotHit.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SkullyDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SkullyNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SmoulderDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SmoulderNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SoldierDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\SoldierNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\TaurDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\TaurNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\Teleport.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\ThingDeath.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\ThingNoise.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+    <Media Include="..\Sons\TimeBonus.wav">
+      <Filter>Resource Files\Sons</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Niveaux\Niveaux.xml">
+      <Filter>Resource Files\Niveaux</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Images\1_2Up.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\AlienBoss.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\AlienFrames.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\backGround.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\backGround2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\BGFin.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\BGPattern.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern0.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern1.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern3.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern4.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern5.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern6.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\blockPattern7.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\bomb.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Bonus_Icons.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Bonuses.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\BOOMLogo.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border0.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border1.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border3.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border4.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border5.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border6.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Border7.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\boxremplie.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\boxvide.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\breakableBlocks.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Coin.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\EggCrack.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\EggFrames.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\EnergyBar.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Explosion.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\EXTRAGame.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\EXTRAIcons.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Fireball.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\fixedBlocks.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Flame.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Flash.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\GameOver.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Ghost.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Giggler.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Gunner.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\HeadBoss.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\HeadMissile.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Heart.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\hurryUp.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Letters.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Lightbolt.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Lizzy.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Magma.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\MGShot.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Plasma.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Player1.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\player1_icon.bmp">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\player1_icon.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\player1_icon2.bmp">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Player1Head.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Player2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Player2Head.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Points.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Points_100K.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Points5K.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Sarge.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Shield.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\shield2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Shot.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Skully.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Smoulder.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Soldier.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Taur.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\teleporter.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\textBox.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\textBox2.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\Thing.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\VolumeBall.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\VolumeBar.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_active.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_bar.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_combo.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_down.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_hslider.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_left.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_normal.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_prelight.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_right.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_selected.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_ss1.jpg">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_ss2.jpg">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_unselected.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_up.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_vslider.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+    <Image Include="..\Images\kiss\kiss_wood.png">
+      <Filter>Resource Files\Images\Kiss</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Fonts\arial.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\arialbd.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\arialbi.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ariali.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ARIALN.TTF">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ARIALNB.TTF">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ARIALNBI.TTF">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ARIALNI.TTF">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\ariblk.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\kiss_font.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="..\Fonts\lucon.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

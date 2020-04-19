@@ -59,8 +59,8 @@ SDL_Texture* ProjectileFireBall::getImage()
 }
 void ProjectileFireBall::initialiserProjectileFireBall()
 {
-    sonHit = Mix_LoadWAV("Sons/FireBallHit.wav");
-    image = chargerSurface("Images/FireBall.png");
+    sonHit = Mix_LoadWAV("../Sons/FireBallHit.wav");
+    image = chargerSurface("../Images/FireBall.png");
 }
 
 void ProjectileFireBall::releaseProjectileFireBall()

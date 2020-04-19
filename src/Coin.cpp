@@ -118,8 +118,8 @@ Coin::~Coin()
 
 void Coin::initialiserCoin()
 {
-   image = chargerSurface("Images/Coin.png");
-   son = Mix_LoadWAV("Sons/Coin.wav");
+   image = chargerSurface("../Images/Coin.png");
+   son = Mix_LoadWAV("../Sons/Coin.wav");
 }
 
 void Coin::releaseCoin()

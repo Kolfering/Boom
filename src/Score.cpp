@@ -122,10 +122,10 @@ SDL_Rect* Score::getAdresseAntiPosition()
 
 void Score::initialiserScore()
 {
-    surface = chargerSurface("Images/Points.png");
-    surface5000 = chargerSurface("Images/Points5k.png");
-    upMegaVie = chargerSurface("Images/1_2Up.png");
-    surface100K = chargerSurface("Images/Points_100K.png");
+    surface = chargerSurface("../Images/Points.png");
+    surface5000 = chargerSurface("../Images/Points5k.png");
+    upMegaVie = chargerSurface("../Images/1_2Up.png");
+    surface100K = chargerSurface("../Images/Points_100K.png");
 }
 
 void Score::releaseScore()

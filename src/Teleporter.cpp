@@ -18,7 +18,7 @@ Teleporter::Teleporter(Case* caseTeleporter,unsigned int indice,unsigned int ind
 
 void Teleporter::initialiserTeleporter()
 {
-    image = chargerSurface("Images/teleporter.png");
+    image = chargerSurface("../Images/teleporter.png");
 }
 
 void Teleporter::releaseTeleporter()

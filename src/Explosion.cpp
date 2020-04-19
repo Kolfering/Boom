@@ -27,7 +27,7 @@ Explosion::Explosion(Bomb* bombe,Case* casePositionExplosion,DirectionExplosion 
 
 void Explosion::initialiserExplosion()
 {
-    image = chargerSurface("Images/explosion.png");
+    image = chargerSurface("../Images/explosion.png");
 }
 
 void Explosion::releaseExplosion()

@@ -37,10 +37,10 @@ EnnemiSmoulder::EnnemiSmoulder(Case* c) : Ennemi(c)
 
 void EnnemiSmoulder::initialiserEnnemiSmoulder()
 {
-    image = chargerSurface("Images/Smoulder.png");
-    sonAtk = Mix_LoadWAV("Sons/Flame.wav");
-    sonMort = Mix_LoadWAV("Sons/SmoulderDeath.wav");
-    sonRandom = Mix_LoadWAV("Sons/SmoulderNoise.wav");
+    image = chargerSurface("../Images/Smoulder.png");
+    sonAtk = Mix_LoadWAV("../Sons/Flame.wav");
+    sonMort = Mix_LoadWAV("../Sons/SmoulderDeath.wav");
+    sonRandom = Mix_LoadWAV("../Sons/SmoulderNoise.wav");
 }
 
 Mix_Chunk* EnnemiSmoulder::getSonRandom()

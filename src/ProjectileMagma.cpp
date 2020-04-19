@@ -62,8 +62,8 @@ SDL_Texture* ProjectileMagma::getImage()
 }
 void ProjectileMagma::initialiserProjectileMagma()
 {
-    sonHit = Mix_LoadWAV("Sons/MagmaHit.wav");
-    image = chargerSurface("Images/Magma.png");
+    sonHit = Mix_LoadWAV("../Sons/MagmaHit.wav");
+    image = chargerSurface("../Images/Magma.png");
 }
 
 void ProjectileMagma::releaseProjectileMagma()

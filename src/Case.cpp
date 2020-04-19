@@ -47,16 +47,16 @@ Case::Case(TypeCase type,SDL_Rect position)
 void Case::initialiserCase()
 {
     std::stringstream ss;
-    ss << "Images/blockPattern" << case_fond << ".png";
+    ss << "../Images/blockPattern" << case_fond << ".png";
     std::string s = ss.str();
     imageFond = chargerSurface(s.c_str());
     std::stringstream ss2;
-    ss2 << "Images/Border" << case_bordure << ".png";
+    ss2 << "../Images/Border" << case_bordure << ".png";
     std::string s2 = ss2.str();
     imageBordure = chargerSurface(s2.c_str());
-    imageCassable = chargerSurface("Images/breakableBlocks.png");
-    imageDur = chargerSurface("Images/fixedBlocks.png");
-    sonCase = Mix_LoadWAV("Sons/BlockDestruction.wav");
+    imageCassable = chargerSurface("../Images/breakableBlocks.png");
+    imageDur = chargerSurface("../Images/fixedBlocks.png");
+    sonCase = Mix_LoadWAV("../Sons/BlockDestruction.wav");
 }
 
 void Case::releaseCase()

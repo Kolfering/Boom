@@ -118,7 +118,7 @@ bool Carte::isNoCoin()
 bool Carte::chargerCarte(int niveau)
 {
     XMLDocument xmlDocument;
-    XMLError xmlResult = xmlDocument.LoadFile("Niveaux/Niveaux.xml");
+    XMLError xmlResult = xmlDocument.LoadFile("../Niveaux/Niveaux.xml");
 
     if(xmlResult != XMLError::XML_SUCCESS)
     {
@@ -160,7 +160,7 @@ bool Carte::chargerCarte(int niveau)
         temps = tmps;
 
         std::stringstream ms;
-        ms << "Musiques/Boom_Music_" << (msq+1) << ".ogg";
+        ms << "../Musiques/Boom_Music_" << (msq+1) << ".ogg";
         musique = Mix_LoadMUS(ms.str().c_str());
 
         noCoin = false;

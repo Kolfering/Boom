@@ -202,23 +202,23 @@ void kiss_init(kiss_array *a,SDL_Renderer* renderer)
 	/*IMG_Init(IMG_INIT_PNG);
 	TTF_Init();*/
 	kiss_array_new(a);
-	r += kiss_font_new(&kiss_textfont, "Fonts/kiss_font.ttf", a,
+	r += kiss_font_new(&kiss_textfont, "../Fonts/kiss_font.ttf", a,
 		kiss_textfont_size);
-	r += kiss_font_new(&kiss_buttonfont, "Fonts/kiss_font.ttf", a,
+	r += kiss_font_new(&kiss_buttonfont, "../Fonts/kiss_font.ttf", a,
 		kiss_buttonfont_size);
-	r += kiss_image_new(&kiss_normal, "Images/kiss/kiss_normal.png", a, renderer);
-	r += kiss_image_new(&kiss_prelight, "Images/kiss/kiss_prelight.png", a, renderer);
-	r += kiss_image_new(&kiss_active, "Images/kiss/kiss_active.png", a, renderer);
-	r += kiss_image_new(&kiss_bar, "Images/kiss/kiss_bar.png", a, renderer);
-	r += kiss_image_new(&kiss_vslider, "Images/kiss/kiss_vslider.png", a, renderer);
-	r += kiss_image_new(&kiss_hslider, "Images/kiss/kiss_hslider.png", a, renderer);
-	r += kiss_image_new(&kiss_up, "Images/kiss/kiss_up.png", a, renderer);
-	r += kiss_image_new(&kiss_down, "Images/kiss/kiss_down.png", a, renderer);
-	r += kiss_image_new(&kiss_left, "Images/kiss/kiss_left.png", a, renderer);
-	r += kiss_image_new(&kiss_right, "Images/kiss/kiss_right.png", a, renderer);
-	r += kiss_image_new(&kiss_combo, "Images/kiss/kiss_combo.png", a, renderer);
-	r += kiss_image_new(&kiss_selected, "Images/kiss/kiss_selected.png", a, renderer);
-	r += kiss_image_new(&kiss_unselected, "Images/kiss/kiss_unselected.png", a, renderer);
+	r += kiss_image_new(&kiss_normal, "../Images/kiss/kiss_normal.png", a, renderer);
+	r += kiss_image_new(&kiss_prelight, "../Images/kiss/kiss_prelight.png", a, renderer);
+	r += kiss_image_new(&kiss_active, "../Images/kiss/kiss_active.png", a, renderer);
+	r += kiss_image_new(&kiss_bar, "../Images/kiss/kiss_bar.png", a, renderer);
+	r += kiss_image_new(&kiss_vslider, "../Images/kiss/kiss_vslider.png", a, renderer);
+	r += kiss_image_new(&kiss_hslider, "../Images/kiss/kiss_hslider.png", a, renderer);
+	r += kiss_image_new(&kiss_up, "../Images/kiss/kiss_up.png", a, renderer);
+	r += kiss_image_new(&kiss_down, "../Images/kiss/kiss_down.png", a, renderer);
+	r += kiss_image_new(&kiss_left, "../Images/kiss/kiss_left.png", a, renderer);
+	r += kiss_image_new(&kiss_right, "../Images/kiss/kiss_right.png", a, renderer);
+	r += kiss_image_new(&kiss_combo, "../Images/kiss/kiss_combo.png", a, renderer);
+	r += kiss_image_new(&kiss_selected, "../Images/kiss/kiss_selected.png", a, renderer);
+	r += kiss_image_new(&kiss_unselected, "../Images/kiss/kiss_unselected.png", a, renderer);
 	if (r) {
 		kiss_clean(a);
 	}

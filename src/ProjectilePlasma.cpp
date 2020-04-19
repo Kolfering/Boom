@@ -42,8 +42,8 @@ SDL_Texture* ProjectilePlasma::getImage()
 }
 void ProjectilePlasma::initialiserProjectilePlasma()
 {
-    sonHit = Mix_LoadWAV("Sons/PlasmaHit.wav");
-    image = chargerSurface("Images/Plasma.png");
+    sonHit = Mix_LoadWAV("../Sons/PlasmaHit.wav");
+    image = chargerSurface("../Images/Plasma.png");
 }
 
 void ProjectilePlasma::releaseProjectilePlasma()

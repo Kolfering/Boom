@@ -28,7 +28,7 @@ MenuMultiplayer::MenuMultiplayer(Input* input,InputMouse* inputMouse,SDL_Window*
    boutonJoinOnline->getAdressePosition()->x = WINDOW_WIDTH/2 - w3/2;
    boutonJoinOnline->getAdressePosition()->y = boutonGatherOnline->getAdressePosition()->y + h2/2 + 30;
 
-   SDL_Texture* logo = chargerSurface("Images/BOOMLogo.png");
+   SDL_Texture* logo = chargerSurface("../Images/BOOMLogo.png");
    SDL_QueryTexture(logo,nullptr,nullptr,&w4,&h4);
    SDL_Rect positionLogo = {WINDOW_WIDTH/2 - w4/2,h4/5,w4,h4};
    listeTexture[logo] = positionLogo;

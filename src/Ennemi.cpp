@@ -49,8 +49,8 @@ bool Ennemi::isApparaitre()
 
 void Ennemi::initialiserEnnemi()
 {
-    imageAlien = chargerSurface("Images/AlienFrames.png");
-    sonAlienMort = Mix_LoadWAV("Sons/AlienDeath.wav");
+    imageAlien = chargerSurface("../Images/AlienFrames.png");
+    sonAlienMort = Mix_LoadWAV("../Sons/AlienDeath.wav");
     alienMode = false;
 }
 

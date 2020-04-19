@@ -35,9 +35,9 @@ EnnemiTaur::EnnemiTaur(Case* c) : Ennemi(c)
 
 void EnnemiTaur::initialiserEnnemiTaur()
 {
-    image = chargerSurface("Images/Taur.png");
-    sonAtk = Mix_LoadWAV("Sons/TaurNoise.wav");
-    sonMort = Mix_LoadWAV("Sons/TaurDeath.wav");
+    image = chargerSurface("../Images/Taur.png");
+    sonAtk = Mix_LoadWAV("../Sons/TaurNoise.wav");
+    sonMort = Mix_LoadWAV("../Sons/TaurDeath.wav");
 }
 
 Mix_Chunk* EnnemiTaur::getSonRandom()

@@ -67,8 +67,8 @@ SDL_Texture* ProjectileHeadMissile::getImage()
 }
 void ProjectileHeadMissile::initialiserProjectileHeadMissile()
 {
-    sonHit = Mix_LoadWAV("Sons/HeadShotHit.wav");
-    image = chargerSurface("Images/HeadMissile.png");
+    sonHit = Mix_LoadWAV("../Sons/HeadShotHit.wav");
+    image = chargerSurface("../Images/HeadMissile.png");
 }
 
 void ProjectileHeadMissile::releaseProjectileHeadMissile()

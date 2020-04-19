@@ -59,12 +59,12 @@ EnnemiHeadBoss::~EnnemiHeadBoss()
 
 void EnnemiHeadBoss::initialiserEnnemiHeadBoss()
 {
-    image = chargerSurface("Images/HeadBoss.png");
-    sonAtk = Mix_LoadWAV("Sons/HeadShot.wav");
-    sonMort = Mix_LoadWAV("Sons/HeadDeath.wav");
-    sonHurt = Mix_LoadWAV("Sons/HeadNoise.wav");
+    image = chargerSurface("../Images/HeadBoss.png");
+    sonAtk = Mix_LoadWAV("../Sons/HeadShot.wav");
+    sonMort = Mix_LoadWAV("../Sons/HeadDeath.wav");
+    sonHurt = Mix_LoadWAV("../Sons/HeadNoise.wav");
 
-    SDL_Surface* imageHurtTmp = IMG_Load("Images/HeadBoss.png");
+    SDL_Surface* imageHurtTmp = IMG_Load("../Images/HeadBoss.png");
 
     Uint32 pixel;
     Uint8 r,g,b,a;

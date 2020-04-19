@@ -59,12 +59,12 @@ EnnemiAlienBoss::EnnemiAlienBoss(Case* c) : Ennemi(c)
 
 void EnnemiAlienBoss::initialiserEnnemiAlienBoss()
 {
-    image = chargerSurface("Images/AlienBoss.png");
-    sonAtk = Mix_LoadWAV("Sons/Egg.wav");
-    sonMort = Mix_LoadWAV("Sons/BossDeath.wav");
-    sonRandom = Mix_LoadWAV("Sons/BossNoise.wav");
+    image = chargerSurface("../Images/AlienBoss.png");
+    sonAtk = Mix_LoadWAV("../Sons/Egg.wav");
+    sonMort = Mix_LoadWAV("../Sons/BossDeath.wav");
+    sonRandom = Mix_LoadWAV("../Sons/BossNoise.wav");
 
-    SDL_Surface* imageHurtTmp = IMG_Load("Images/AlienBoss.png");
+    SDL_Surface* imageHurtTmp = IMG_Load("../Images/AlienBoss.png");
 
     Uint32 pixel;
     Uint8 r,g,b,a;

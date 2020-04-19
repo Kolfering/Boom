@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
 
     SDL_Window* screen = SDL_CreateWindow("Boom",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,WINDOW_WIDTH,WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
-    SDL_Surface* image = SDL_LoadBMP("Images/player1_icon2.bmp");
+    SDL_Surface* image = SDL_LoadBMP("../Images/player1_icon2.bmp");
     SDL_SetColorKey(image, SDL_TRUE, SDL_MapRGB(image->format, 0, 255, 255));
     SDL_SetWindowIcon(screen,image);
     SDL_Renderer* renderer = SDL_CreateRenderer(screen,-1,SDL_RENDERER_TARGETTEXTURE);

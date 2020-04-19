@@ -35,10 +35,10 @@ EnnemiLizzy::EnnemiLizzy(Case* c) : Ennemi(c)
 
 void EnnemiLizzy::initialiserEnnemiLizzy()
 {
-    image = chargerSurface("Images/Lizzy.png");
-    sonAtk = Mix_LoadWAV("Sons/FireBall.wav");
-    sonMort = Mix_LoadWAV("Sons/LizzyDeath.wav");
-    sonRandom = Mix_LoadWAV("Sons/LizzyNoise.wav");
+    image = chargerSurface("../Images/Lizzy.png");
+    sonAtk = Mix_LoadWAV("../Sons/FireBall.wav");
+    sonMort = Mix_LoadWAV("../Sons/LizzyDeath.wav");
+    sonRandom = Mix_LoadWAV("../Sons/LizzyNoise.wav");
 }
 
 Mix_Chunk* EnnemiLizzy::getSonRandom()

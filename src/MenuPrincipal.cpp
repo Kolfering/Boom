@@ -19,7 +19,7 @@ MenuPrincipal::MenuPrincipal(Input* input,InputMouse* inputMouse,SDL_Window* scr
     BoutonQuitter* boutonQuitter = new BoutonQuitter(this);
     Libelle* libelleRights = new Libelle("Made by Ben Corporation - Based on the original game",this,{255,255,255},10);
 
-    SDL_Texture* logo = chargerSurface("Images/BOOMLogo.png");
+    SDL_Texture* logo = chargerSurface("../Images/BOOMLogo.png");
 
     SDL_QueryTexture(boutonNouvellePartie->getImage(),nullptr,nullptr,&w,&h);
     SDL_QueryTexture(boutonContinue->getImage(),nullptr,nullptr,&w2,&h2);

@@ -15,7 +15,7 @@ void Libelle::setTexte(std::string texte)
 {
     if(image == nullptr) SDL_DestroyTexture(image);
     this->texte = texte;
-    TTF_Font* font = (taille == -1 ? menu->getPolice() : TTF_OpenFont("Fonts/lucon.ttf",taille));
+    TTF_Font* font = (taille == -1 ? menu->getPolice() : TTF_OpenFont("../Fonts/lucon.ttf",taille));
     if(bold) TTF_SetFontStyle(font,TTF_STYLE_BOLD);
     SDL_Surface* imageTmp = TTF_RenderText_Blended(font,texte.c_str(),color);
     image = SDL_CreateTextureFromSurface(Jeu::getRenderer(),imageTmp);

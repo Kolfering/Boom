@@ -35,10 +35,10 @@ EnnemiThing::EnnemiThing(Case* c) : Ennemi(c)
 
 void EnnemiThing::initialiserEnnemiThing()
 {
-    image = chargerSurface("Images/Thing.png");
-    sonAtk = Mix_LoadWAV("Sons/Bolt.wav");
-    sonRandom = Mix_LoadWAV("Sons/ThingNoise.wav");
-    sonMort = Mix_LoadWAV("Sons/ThingDeath.wav");
+    image = chargerSurface("../Images/Thing.png");
+    sonAtk = Mix_LoadWAV("../Sons/Bolt.wav");
+    sonRandom = Mix_LoadWAV("../Sons/ThingNoise.wav");
+    sonMort = Mix_LoadWAV("../Sons/ThingDeath.wav");
 }
 
 Mix_Chunk* EnnemiThing::getSonRandom()

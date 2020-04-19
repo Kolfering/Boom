@@ -56,13 +56,13 @@ void MenuPrepareNetworkGame::initMenu(Menu* menuPar)
    kiss_entry_new(&kiss_entryChat, &window, 1, "",kiss_textboxChat.rect.x,kiss_textboxChat.rect.y + kiss_textboxChat.rect.h + 5,500);
 
    int w2,h2;
-   SDL_Texture* firstPlayerIcone = chargerSurface("Images/Player1Head.png");
+   SDL_Texture* firstPlayerIcone = chargerSurface("../Images/Player1Head.png");
    SDL_QueryTexture(firstPlayerIcone,nullptr,nullptr,&w2,&h2);
    SDL_Rect positionFirstPlayerIcone = {kiss_textboxChat.rect.x,kiss_textboxChat.rect.y - h2 ,w2,h2};
    listeTexture[firstPlayerIcone] = positionFirstPlayerIcone;
 
    int w4,h4;
-   playerConnectedTexture = chargerSurface("Images/Player2Head.png");
+   playerConnectedTexture = chargerSurface("../Images/Player2Head.png");
    SDL_QueryTexture(playerConnectedTexture,nullptr,nullptr,&w4,&h4);
    positionPlayerConnectedTexture = {positionFirstPlayerIcone.x + positionFirstPlayerIcone.w ,positionFirstPlayerIcone.y,w4,h4};
 

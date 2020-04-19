@@ -56,7 +56,7 @@ unsigned int Lettre::getIndice()
 }
 void Lettre::initialiserLettre()
 {
-    image = chargerSurface("Images/Letters.png");
+    image = chargerSurface("../Images/Letters.png");
 }
 
 void Lettre::releaseLettre()

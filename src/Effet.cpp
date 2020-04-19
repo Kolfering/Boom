@@ -17,8 +17,8 @@ Effet::Effet(unsigned int x, unsigned int y)
 
 void Effet::initialiserEffet()
 {
-    image = chargerSurface("Images/Flash.png");
-    sonEffet = Mix_LoadWAV("Sons/Teleport.wav");
+    image = chargerSurface("../Images/Flash.png");
+    sonEffet = Mix_LoadWAV("../Sons/Teleport.wav");
 }
 
 void Effet::releaseEffet()

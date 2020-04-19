@@ -18,9 +18,9 @@ MenuTemplate::MenuTemplate(Input* input,InputMouse* inputMouse,SDL_Window* scree
 
 void MenuTemplate::initialiseMenuTemplate()
 {
-    police = TTF_OpenFont("Fonts/lucon.ttf",30);
+    police = TTF_OpenFont("../Fonts/lucon.ttf",30);
     int w,h;
-    backGround = chargerSurface("Images/backGround2.png");
+    backGround = chargerSurface("../Images/backGround2.png");
     SDL_QueryTexture(backGround,nullptr,nullptr,&w,&h);
     positionBackGround.x = 0;
     positionBackGround.y = 0;

@@ -454,9 +454,9 @@ SDL_Texture* ProjectileEgg::getImage()
 }
 void ProjectileEgg::initialiserProjectileEgg()
 {
-    sonHit = Mix_LoadWAV("Sons/EggCrack.wav");
-    image = chargerSurface("Images/EggFrames.png");
-    imageExplose = chargerSurface("Images/EggCrack.png");
+    sonHit = Mix_LoadWAV("../Sons/EggCrack.wav");
+    image = chargerSurface("../Images/EggFrames.png");
+    imageExplose = chargerSurface("../Images/EggCrack.png");
 }
 
 

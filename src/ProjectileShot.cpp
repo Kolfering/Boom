@@ -61,8 +61,8 @@ SDL_Texture* ProjectileShot::getImage()
 }
 void ProjectileShot::initialiserProjectileShot()
 {
-    sonHit = Mix_LoadWAV("Sons/ShotHit.wav");
-    image = chargerSurface("Images/Shot.png");
+    sonHit = Mix_LoadWAV("../Sons/ShotHit.wav");
+    image = chargerSurface("../Images/Shot.png");
 }
 
 void ProjectileShot::releaseProjectileShot()
