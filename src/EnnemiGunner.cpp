@@ -35,10 +35,10 @@ EnnemiGunner::EnnemiGunner(Case* c) : Ennemi(c)
 
 void EnnemiGunner::initialiserEnnemiGunner()
 {
-    image = chargerSurface("Images/Gunner.png");
-    sonAtk = Mix_LoadWAV("Sons/Pulse.wav");
-    sonMort = Mix_LoadWAV("Sons/GunnerDeath.wav");
-    sonRandom = Mix_LoadWAV("Sons/GunnerNoise.wav");
+    image = chargerSurface("../Images/Gunner.png");
+    sonAtk = Mix_LoadWAV("../Sons/Pulse.wav");
+    sonMort = Mix_LoadWAV("../Sons/GunnerDeath.wav");
+    sonRandom = Mix_LoadWAV("../Sons/GunnerNoise.wav");
 }
 
 Mix_Chunk* EnnemiGunner::getSonRandom()

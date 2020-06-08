@@ -42,10 +42,10 @@ SDL_Texture* EnnemiSarge::getImage()
 
 void EnnemiSarge::initialiserEnnemiSarge()
 {
-    image = chargerSurface("Images/Sarge.png");
-    sonMort = Mix_LoadWAV("Sons/SargeDeath2.wav");
-    sonRandom = Mix_LoadWAV("Sons/SargeNoise.wav");
-    sonAtk = Mix_LoadWAV("Sons/Shot.wav");
+    image = chargerSurface("../Images/Sarge.png");
+    sonMort = Mix_LoadWAV("../Sons/SargeDeath2.wav");
+    sonRandom = Mix_LoadWAV("../Sons/SargeNoise.wav");
+    sonAtk = Mix_LoadWAV("../Sons/Shot.wav");
 }
 
 Mix_Chunk* EnnemiSarge::getSonMort()
